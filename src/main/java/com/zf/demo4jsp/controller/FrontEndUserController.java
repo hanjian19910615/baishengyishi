@@ -141,7 +141,7 @@ public class FrontEndUserController {
     public ModelAndView loginUserinfo(String phone,String pwd) {
         ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
         UserInfo userInfo = userInfoMapper.login(phone,pwd);//根据手机号进行数据匹配
-        if(userInfo!=null){
+        if(userInfo!=null){//判断数据
             mv.addObject("userInfo", userInfo);
             mv.addObject("loginSuccess","1");//登录成功
         }else{
