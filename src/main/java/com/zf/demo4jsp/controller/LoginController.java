@@ -63,15 +63,6 @@ public class LoginController {
         model.addAttribute("sname", username);//数据回显
         return "role";//返回到用户管理页面
     }
-//        //删除用户
-//        @RequestMapping("/delUserInfo")
-//        public void delUserInfo(Model model,@Param("userid") int userid){
-//         int count =   userInfoMapper.deleteByPrimaryKey(userid);
-//         if(count==1){
-//             model.addAttribute("删除成功！");
-//         }else{
-//             model.addAttribute("删除失败！");
-//         }
-//        }
+
 
 }

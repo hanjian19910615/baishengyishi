@@ -133,8 +133,9 @@ public class FrontEndUserController {
     }
 
     /**
-     * d登录接口
-     *@Param  String pwd
+     * 登录接口
+     *@Param  String phone
+     * @Param  String pwd
      * @return
      */
     @RequestMapping("/loginUserinfo")
