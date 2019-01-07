@@ -1,0 +1,1 @@
+spring boot整合mybatis,不使用注解,使用xml配置的方式
