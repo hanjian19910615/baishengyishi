@@ -72,4 +72,15 @@
       </if>
     </where>
   </select>
+<!--app端-->
+  <select id="selectOrderByUserIdAll" parameterType="String" resultMap="BaseResultMap" >
+    SELECT * FROM `order`
+  
+    <where>
+      <if test="_parameter !=null">
+        userId = #{userId,jdbcType=VARCHAR}
+      </if>
+    </where>
+
+  </select>
 </mapper>

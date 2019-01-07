@@ -57,4 +57,7 @@ public interface OrderMapper {
     int updateByPrimaryKey(Order record);
 
     List<Order> selectOrderAll(String orderName);
+    //app端
+
+    List<Order> selectOrderByUserIdAll(String userId);
 }
