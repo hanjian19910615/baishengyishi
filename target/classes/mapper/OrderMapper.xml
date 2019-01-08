@@ -13,7 +13,8 @@
       <arg column="orderAmount" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="orderTime" jdbcType="DATE" javaType="java.util.Date" />
       <arg column="userId" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="paymentStatus" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="paymentStatus" jdbcType="VARCHAR" javaType="java.lang.String" />
+
     </constructor>
   </resultMap>
   <sql id="Base_Column_List" >
@@ -75,12 +76,13 @@
 <!--app端-->
   <select id="selectOrderByUserIdAll" parameterType="String" resultMap="BaseResultMap" >
     SELECT * FROM `order`
-  
     <where>
       <if test="_parameter !=null">
         userId = #{userId,jdbcType=VARCHAR}
       </if>
+      <if test="paymentStatus !=null">
+        and paymentStatus = #{paymentStatus,jdbcType=INTEGER}
+      </if>
     </where>
-
   </select>
 </mapper>

@@ -58,4 +58,8 @@ public interface QuestionsAndAnswersMapper {
     int updateByPrimaryKey(QuestionsAndAnswers record);
 
     List<QuestionsAndAnswers> selectQuestionsandanswersAll(String questions);
+
+    //app端
+
+    List<QuestionsAndAnswers> selectQuestionsandanswersList();
 }

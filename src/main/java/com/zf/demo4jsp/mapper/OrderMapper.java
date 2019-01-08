@@ -2,6 +2,7 @@ package com.zf.demo4jsp.mapper;
 
 import com.zf.demo4jsp.entity.Order;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -59,5 +60,5 @@ public interface OrderMapper {
     List<Order> selectOrderAll(String orderName);
     //app端
 
-    List<Order> selectOrderByUserIdAll(String userId);
+    List<Order> selectOrderByUserIdAll(@Param("userId") String userId, @Param("paymentStatus")String paymentStatus);
 }
