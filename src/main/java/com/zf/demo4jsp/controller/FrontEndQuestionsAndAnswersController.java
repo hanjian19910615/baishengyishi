@@ -30,7 +30,6 @@ public class FrontEndQuestionsAndAnswersController {
         }
         return mv;
     }
-
     /**
      * app端首页问答详细信息
      *int id
