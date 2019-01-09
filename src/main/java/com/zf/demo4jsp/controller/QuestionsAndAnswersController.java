@@ -2,9 +2,7 @@ package com.zf.demo4jsp.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.zf.demo4jsp.entity.Order;
 import com.zf.demo4jsp.entity.QuestionsAndAnswers;
-import com.zf.demo4jsp.mapper.OrderMapper;
 import com.zf.demo4jsp.mapper.QuestionsAndAnswersMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

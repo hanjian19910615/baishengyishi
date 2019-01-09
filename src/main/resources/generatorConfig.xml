@@ -50,17 +50,17 @@
             <property name="immutable" value="false" />
         </javaModelGenerator>
 
-        <!-- targetPackage 和 targetProject：生成的 mapper 文件的包和位置 -->
-        <sqlMapGenerator targetPackage="resources.mapping" targetProject="src">
-            <property name="enableSubPackages" value="true"/>
-        </sqlMapGenerator>
+        <!--&lt;!&ndash; targetPackage 和 targetProject：生成的 mapper 文件的包和位置 &ndash;&gt;-->
+        <!--<sqlMapGenerator targetPackage="resources.mapping" targetProject="src">-->
+            <!--<property name="enableSubPackages" value="true"/>-->
+        <!--</sqlMapGenerator>-->
 
-        <!-- targetPackage 和 targetProject：生成的 interface 文件的包和位置 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zf.demo4jsp.mapper" targetProject=".\src\main\java">
-            <!-- 针对 oracle 数据库的一个配置，是否把 schema 作为字包名 -->
-            <property name="enableSubPackages" value="false" />
-        </javaClientGenerator>
-        <table tableName="classification" domainObjectName="ClassIfication"
+        <!--&lt;!&ndash; targetPackage 和 targetProject：生成的 interface 文件的包和位置 &ndash;&gt;-->
+        <!--<javaClientGenerator type="XMLMAPPER" targetPackage="com.zf.demo4jsp.mapper" targetProject=".\src\main\java">-->
+            <!--&lt;!&ndash; 针对 oracle 数据库的一个配置，是否把 schema 作为字包名 &ndash;&gt;-->
+            <!--<property name="enableSubPackages" value="false" />-->
+        <!--</javaClientGenerator>-->
+        <table tableName="questionsAndAnswers" domainObjectName="QuestionsAndAnswers"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">

@@ -1,7 +1,6 @@
 package com.zf.demo4jsp.mapper;
 
 import com.zf.demo4jsp.entity.ClassIfication;
-import com.zf.demo4jsp.entity.Order;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 
