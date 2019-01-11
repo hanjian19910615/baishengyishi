@@ -12,10 +12,16 @@
             <arg column="paymentStatus" jdbcType="VARCHAR" javaType="java.lang.String"/>
             <arg column="orderType" jdbcType="VARCHAR" javaType="java.lang.String"/>
             <arg column="disableEnable" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="solutionState" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="userType" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="orderTypeMX" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="userName" jdbcType="VARCHAR" javaType="java.lang.String"/>
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
-    id, orderNumber, orderName, orderAmount, orderTime, userId, paymentStatus,orderType,disableEnable
+    id, orderNumber, orderName, orderAmount, orderTime,
+    userId, paymentStatus,orderType,disableEnable,solutionState
+    userType,orderTypeMX,userName
   </sql>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select
@@ -32,7 +38,8 @@
 
     insert into  `order` (id, orderNumber, orderName,
       orderAmount, orderTime, userId, 
-      paymentStatus)
+      paymentStatus,orderType,disableEnable,
+      solutionState, userType,orderTypeMX,userName)
     values (#{id,jdbcType=INTEGER},
             #{ordernumber,jdbcType=VARCHAR},
             #{ordername,jdbcType=VARCHAR},
@@ -41,12 +48,17 @@
             #{userid,jdbcType=VARCHAR},
             #{paymentstatus,jdbcType=VARCHAR},
             #{ordertype,jdbcType=VARCHAR},
-            #{disableEnable,jdbcType=INTEGER}
+            #{disableEnable,jdbcType=INTEGER},
+            #{solutionState,jdbcType=INTEGER},
+            #{userType,jdbcType=VARCHAR},
+            #{orderTypeMX,jdbcType=VARCHAR},
+            #{userName,jdbcType=VARCHAR}
+
       )
   </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.zf.demo4jsp.entity.Order">
 
-        update  `order`
+        update `order`
         <set>
             <if test="ordernumber != null">
                 orderNumber = #{ordernumber,jdbcType=VARCHAR},

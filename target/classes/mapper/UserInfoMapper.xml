@@ -258,4 +258,12 @@
     AND
     pwd = #{pwd,jdbcType=VARCHAR}
   </select>
+
+  <select id="selectByYiShi"  resultType="com.zf.demo4jsp.entity.UserInfo" >
+    select
+    <include refid="Base_Column_List" />
+    from userinfo
+    WHERE
+    state=1
+  </select>
 </mapper>

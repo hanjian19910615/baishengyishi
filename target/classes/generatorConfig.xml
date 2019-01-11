@@ -60,7 +60,7 @@
             <!--&lt;!&ndash; 针对 oracle 数据库的一个配置，是否把 schema 作为字包名 &ndash;&gt;-->
             <!--<property name="enableSubPackages" value="false" />-->
         <!--</javaClientGenerator>-->
-        <table tableName="questionsAndAnswers" domainObjectName="QuestionsAndAnswers"
+        <table tableName="order" domainObjectName="Order"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">

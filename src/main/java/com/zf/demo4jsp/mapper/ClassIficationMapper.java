@@ -58,4 +58,6 @@ public interface ClassIficationMapper {
     int updateByPrimaryKey(ClassIfication record);
 
     List<ClassIfication> selectClassIficationAll(String name);
+    //app端
+    List<ClassIfication>  classIficationByIdAll( String parentid);
 }

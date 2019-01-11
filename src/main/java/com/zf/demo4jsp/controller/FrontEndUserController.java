@@ -8,6 +8,8 @@ import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
+
+import java.util.List;
 import java.util.Random;
 import com.zf.demo4jsp.entity.UserInfo;
 import com.zf.demo4jsp.mapper.UserInfoMapper;
@@ -150,6 +152,25 @@ public class FrontEndUserController {
         }
         return mv;
     }
+
+    /**
+     * 查询易师列表接口
+     * @return
+     */
+    @RequestMapping("/selectByYiShi")
+    public ModelAndView selectByYiShi() {
+        ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
+        List<UserInfo> userInfos = userInfoMapper.selectByYiShi();//根据手机号进行数据匹配
+        if(userInfos!=null){//判断数据
+            mv.addObject("userInfos", userInfos);
+            mv.addObject("userInfosSuccess","1");//查询成功
+        }else{
+            mv.addObject("userInfosError","0");//查询失败
+        }
+        return mv;
+    }
+
+
     /**
      * 生成随机的6位数，短信验证码
      * @return

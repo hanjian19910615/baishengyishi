@@ -26,4 +26,7 @@ public interface UserInfoMapper  {
     UserInfo selectUserByPhone(String phone );
 
     UserInfo login(@Param("phone")String phone ,@Param("pwd")String pwd);
+
+    //查询全部易师
+    List<UserInfo> selectByYiShi();
 }

@@ -10,7 +10,10 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import java.util.List;
 
 
-
+/**
+ * app普通用户端订单接口
+ * @return
+ */
 @Controller
 public class FrontEndOrderController {
     @Autowired
@@ -69,7 +72,6 @@ public class FrontEndOrderController {
         }
         return mv;
     }
-
 
 
 }
