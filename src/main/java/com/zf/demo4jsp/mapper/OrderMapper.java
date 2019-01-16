@@ -61,6 +61,11 @@ public interface OrderMapper {
 
     List<Order> selectOrderAll(String orderName);
     //app端
-
     List<Order> selectOrderByUserIdAll(@Param("userId") String userId, @Param("paymentStatus")String paymentStatus);
+    //统计已支付未解决订单
+    int selectCountOrderBySolutionState(String userId);
+    //统计未支付订单
+    int selectCountOrderBypaymentStatus(String paymentStatus);
+
+    Order selectOrderByorderNumber(String ordernumber);
 }

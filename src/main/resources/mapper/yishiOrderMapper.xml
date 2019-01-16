@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zf.demo4jsp.mapper.yishiOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.zf.demo4jsp.entity.yishiOrder" >
+    <constructor >
+      <arg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="orderNumber" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="orderAmount" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="orderName" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="orderTime" jdbcType="DATE" javaType="java.util.Date" />
+      <arg column="userId" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="paymentStatus" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="solutionState" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="orderType" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="userName" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="yishiId" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="yishiName" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+  <insert id="insert" parameterType="com.zf.demo4jsp.entity.yishiOrder" >
+    insert into yishiorder (id, orderNumber, orderAmount, 
+      orderName, orderTime, userId, 
+      paymentStatus, solutionState, orderType, 
+      userName, yishiId, yishiName
+      )
+    values (#{id,jdbcType=INTEGER}, #{ordernumber,jdbcType=VARCHAR}, #{orderamount,jdbcType=VARCHAR}, 
+      #{ordername,jdbcType= VARCHAR}, #{ordertime,jdbcType=DATE}, #{userid,jdbcType=VARCHAR},
+      #{paymentstatus,jdbcType=VARCHAR}, #{solutionstate,jdbcType=VARCHAR}, #{ordertype,jdbcType=VARCHAR}, 
+      #{username,jdbcType=VARCHAR}, #{yishiid,jdbcType=VARCHAR}, #{yishiname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zf.demo4jsp.entity.yishiOrder" >
+
+    insert into yishiorder
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="ordernumber != null" >
+        orderNumber,
+      </if>
+      <if test="orderamount != null" >
+        orderAmount,
+      </if>
+      <if test="ordername != null" >
+        orderName,
+      </if>
+      <if test="ordertime != null" >
+        orderTime,
+      </if>
+      <if test="userid != null" >
+        userId,
+      </if>
+      <if test="paymentstatus != null" >
+        paymentStatus,
+      </if>
+      <if test="solutionstate != null" >
+        solutionState,
+      </if>
+      <if test="ordertype != null" >
+        orderType,
+      </if>
+      <if test="username != null" >
+        userName,
+      </if>
+      <if test="yishiid != null" >
+        yishiId,
+      </if>
+      <if test="yishiname != null" >
+        yishiName,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="ordernumber != null" >
+        #{ordernumber,jdbcType=VARCHAR},
+      </if>
+      <if test="orderamount != null" >
+        #{orderamount,jdbcType=VARCHAR},
+      </if>
+      <if test="ordername != null" >
+        #{ordername,jdbcType=VARCHAR},
+      </if>
+      <if test="ordertime != null" >
+        #{ordertime,jdbcType=DATE},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="paymentstatus != null" >
+        #{paymentstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="solutionstate != null" >
+        #{solutionstate,jdbcType=VARCHAR},
+      </if>
+      <if test="ordertype != null" >
+        #{ordertype,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="yishiid != null" >
+        #{yishiid,jdbcType=VARCHAR},
+      </if>
+      <if test="yishiname != null" >
+        #{yishiname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

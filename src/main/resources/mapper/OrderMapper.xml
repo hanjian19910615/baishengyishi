@@ -48,13 +48,11 @@
             #{userid,jdbcType=VARCHAR},
             #{paymentstatus,jdbcType=VARCHAR},
             #{ordertype,jdbcType=VARCHAR},
-            #{disableEnable,jdbcType=INTEGER},
-            #{solutionState,jdbcType=INTEGER},
-            #{userType,jdbcType=VARCHAR},
-            #{orderTypeMX,jdbcType=VARCHAR},
-            #{userName,jdbcType=VARCHAR}
-
-      )
+            #{disableenable,jdbcType=INTEGER},
+            #{solutionstate,jdbcType=INTEGER},
+            #{usertype,jdbcType=VARCHAR},
+            #{ordertypemx,jdbcType=VARCHAR},
+            #{username,jdbcType=VARCHAR} )
   </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.zf.demo4jsp.entity.Order">
 
@@ -106,5 +104,42 @@
             </if>
             and disableEnable=1
         </where>
+    </select>
+    <!--统计未解决订单-->
+    <select id="selectCountOrderBySolutionState" parameterType="String" resultMap="BaseResultMap">
+        SELECT
+        COUNT(*)
+         FROM
+         `order`  o
+          where
+           o.solutionState=0
+           and
+           userId = #{userId,jdbcType=VARCHAR}
+    </select>
+
+    <!--统计支付状态订单-->
+    <select id="selectCountOrderBypaymenselectOrderByUserIdAlltStatus" parameterType="String" resultMap="BaseResultMap">
+        SELECT
+        COUNT(*)
+         FROM
+         `order`  o
+        <where>
+            <if test="paymentStatus !=null">
+                and paymentStatus = #{paymentStatus,jdbcType=INTEGER}
+            </if>
+        </where>
+    </select>
+
+    <!--根据订单号查询订单-->
+    <select id="selectOrderByorderNumber" parameterType="String" resultMap="BaseResultMap">
+        SELECT
+        *
+        FROM
+        `order`  o
+
+           where
+                o. orderNumber = #{orderNumber,jdbcType=VARCHAR}
+
+
     </select>
 </mapper>

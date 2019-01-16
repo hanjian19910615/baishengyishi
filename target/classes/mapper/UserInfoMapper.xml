@@ -38,13 +38,15 @@
       <arg column="alipayName" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="alipayAccount" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="toExamine" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="yishiAmount" jdbcType="VARCHAR" javaType="java.lang.String" />
+
     </constructor>
   </resultMap>
   <sql id="Base_Column_List" >
     userId, userName, pwd, nickname, sex, address, city, qq, email, phone, occupationType, 
     state, idCard, idNumber, headPortrait, frontOfDocument, reverseOfDocuments, beGoodAtShuShu, 
     title, learningExperience, practitionersYear, careerExperience, field, chargeSituation, 
-    channel, weixin, salaryExpectation, level, alipayName, alipayAccount, toExamine
+    channel, weixin, salaryExpectation, level, alipayName, alipayAccount, toExamine,yishiAmount
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
