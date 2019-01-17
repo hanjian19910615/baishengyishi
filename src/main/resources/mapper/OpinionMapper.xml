@@ -8,9 +8,26 @@
       <arg column="contactInformation" jdbcType="VARCHAR" javaType="java.lang.String" />
     </constructor>
   </resultMap>
-
+  <insert id="insert" parameterType="com.zf.demo4jsp.entity.Opinion" >
+    insert into opinion (id, opinionContact, contactInformation
+      )
+    values (#{id,jdbcType=INTEGER}, #{opinioncontact,jdbcType=VARCHAR}, #{contactinformation,jdbcType=VARCHAR}
+      )
+  </insert>
   <insert id="insertSelective" parameterType="com.zf.demo4jsp.entity.Opinion" >
     insert into opinion
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="opinioncontact != null" >
+        opinionContact,
+      </if>
+      <if test="contactinformation != null" >
+        contactInformation,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         #{id,jdbcType=INTEGER},
       </if>
@@ -20,12 +37,6 @@
       <if test="contactinformation != null" >
         #{contactinformation,jdbcType=VARCHAR},
       </if>
-
+    </trim>
   </insert>
-  <select id="selectOpinion" resultMap="BaseResultMap" >
-        select
-        *
-        from
-       opinion
-    </select>
 </mapper>

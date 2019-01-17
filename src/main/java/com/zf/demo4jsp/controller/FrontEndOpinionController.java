@@ -30,17 +30,17 @@ public class FrontEndOpinionController {
         Opinion opinion = new Opinion();
         opinion.setContactinformation(contactinformation);
         opinion.setOpinioncontact(opinioncontact);
-        int count = opinionMapper.insertSelective(opinion);
+        int count = opinionMapper.insert(opinion);
         if(count==1){
             mv.addObject("opinionSuccess", "1");//1代表成功
         }else {
-            mv.addObject("yzmError", "0");//0代表错误
+            mv.addObject("opinionError", "0");//0代表错误
         }
         return mv;
     }
 
     /**
-     * app意见反馈添加
+     * app意见反馈查询
      *
      * @return mv
      */
@@ -55,6 +55,4 @@ public class FrontEndOpinionController {
         }
         return mv;
     }
-
-
 }
