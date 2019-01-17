@@ -68,4 +68,6 @@ public interface OrderMapper {
     int selectCountOrderBypaymentStatus(String paymentStatus);
 
     Order selectOrderByorderNumber(String ordernumber);
+    //支付成功修改订单号状态
+    int updateOrederPaymentstatus(Order record);
 }

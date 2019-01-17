@@ -98,7 +98,10 @@
     <select id="selectOrderByUserIdAll" parameterType="String" resultMap="BaseResultMap">
         SELECT * FROM `order`
         <where>
-            userId = #{userId,jdbcType=VARCHAR}
+            <if test="userId !=null">
+                userId = #{userId,jdbcType=VARCHAR}
+            </if>
+
             <if test="paymentStatus !=null">
                 and paymentStatus = #{paymentStatus,jdbcType=INTEGER}
             </if>
@@ -121,25 +124,34 @@
     <select id="selectCountOrderBypaymenselectOrderByUserIdAlltStatus" parameterType="String" resultMap="BaseResultMap">
         SELECT
         COUNT(*)
-         FROM
-         `order`  o
+        FROM
+        `order` o
         <where>
             <if test="paymentStatus !=null">
                 and paymentStatus = #{paymentStatus,jdbcType=INTEGER}
             </if>
         </where>
     </select>
-
     <!--根据订单号查询订单-->
     <select id="selectOrderByorderNumber" parameterType="String" resultMap="BaseResultMap">
         SELECT
         *
         FROM
         `order`  o
-
-           where
-                o. orderNumber = #{orderNumber,jdbcType=VARCHAR}
-
-
+        where
+        o. orderNumber = #{orderNumber,jdbcType=VARCHAR}
     </select>
+
+    <!--修改订单支付-->
+    <update id="updateOrederPaymentstatus" parameterType="com.zf.demo4jsp.entity.Order">
+        update `order`
+        <set>
+            <if test="paymentstatus != null">
+                paymentStatus = #{paymentstatus,jdbcType=VARCHAR},
+            </if>
+        </set>
+        <where>
+            ordernumber = #{ordernumber,jdbcType=VARCHAR}
+        </where>
+    </update>
 </mapper>

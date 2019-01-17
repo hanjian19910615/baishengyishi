@@ -65,7 +65,7 @@ public class FrontEndUserController {
         //友情提示:如果JSON中需要带换行符,请参照标准的JSON协议对换行符的要求,比如短信内容中包含\r\n的情况在JSON中需要表示成\\r\\n,否则会导致JSON在服务端解析失败
         //request.setTemplateParam("{\"code\":\"988756\"}");
         //String msgCode = getMsgCode();//生成随机数
-        String msgCode = "1";
+       String msgCode = "1";
         session.setAttribute("yzm", msgCode);
         request.setTemplateParam("{\"code\":\"" + msgCode + "\"}");
         //请求失败这里会抛ClientException异常
@@ -90,7 +90,7 @@ public class FrontEndUserController {
         ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
         yzm = "1";
         String ymz1 = "1";
-        //String ymz1= (String)session.getAttribute("yzm");
+       // String ymz1= (String)session.getAttribute("yzm");
         session.setAttribute("phone", phone);
         if (!yzm.equals(ymz1)) {
             mv.addObject("error", "0");//0代表错误
@@ -185,4 +185,34 @@ public class FrontEndUserController {
         return code.toString();//返回6位随机数
     }
 
+    /**
+     * 改修用户密码,手机号
+     * @Param  String pwd
+     * @Param  String phone
+     * @Param  String userId
+     * @return
+     */
+    @RequestMapping("/updatePwdOrPhone")
+    public ModelAndView updatePwdOrPhone( String pwd,String phone, Integer userId,String yzm) {
+        ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
+        UserInfo userInfo = new UserInfo();
+            if(pwd!=null){//密码
+                userInfo.setPwd(pwd);
+            }else if(phone!=null){//手机号
+                userInfo.setPhone(phone);
+                yzm = "1";
+                String ymz1 = "1";
+                if (!yzm.equals(ymz1)) {
+                    mv.addObject("yzmError", "0");//0代表错误
+                }
+            }
+            userInfo.setUserid(userId);//用户编号
+            int count = userInfoMapper.updateByPrimaryKeySelective(userInfo);
+            if(count == 1){
+                mv.addObject("success","1");
+            }else{
+                mv.addObject("error","0");
+            }
+           return mv;
+    }
 }

@@ -120,6 +120,7 @@ public class FrontEndOrderController {
         //请保证OutTradeNo值每次保证唯一
         String msgCode = getMsgCodeRandom();//生成随机数
         order.setOrdernumber(msgCode);
+        order.setOrdertype("1");
         session.setAttribute("ordNum",order.getOrdernumber());
             int count =orderMapper.insert(order);
         if (count==1){
@@ -216,6 +217,30 @@ public class FrontEndOrderController {
         }
         return mv;
     }
+
+    /**
+     * app端支付宝和微信支付
+     * @Param String userId
+     * @return count
+     */
+    @RequestMapping("/updateOrederPaymentstatus")
+    public ModelAndView  updateOrederPaymentstatus(String resltMessage,String orderNumber){
+        ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
+        if(resltMessage.equals("9000")){
+            Order record = new Order();
+            record.setPaymentstatus("1");
+            record.setOrdernumber(orderNumber);
+            int count = orderMapper.updateOrederPaymentstatus(record);
+            if(count==1){
+                mv.addObject("success","修改支付信息成功");
+            }else{
+                mv.addObject("error","修改支付信息失败");
+            }
+        }
+
+        return mv;
+    }
+
 
     /**
      * 生成随机的6位数，短信验证码

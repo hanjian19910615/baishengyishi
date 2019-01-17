@@ -180,42 +180,6 @@
     </set>
     where userId = #{userid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.zf.demo4jsp.entity.UserInfo" >
-
-    update userinfo
-    set
-      userName = #{username,jdbcType=VARCHAR},
-      pwd = #{pwd,jdbcType=VARCHAR},
-      nickname = #{nickname,jdbcType=VARCHAR},
-      sex = #{sex,jdbcType=INTEGER},
-      address = #{address,jdbcType=VARCHAR},
-      city = #{city,jdbcType=VARCHAR},
-      qq = #{qq,jdbcType=VARCHAR},
-      email = #{email,jdbcType=VARCHAR},
-      phone = #{phone,jdbcType=VARCHAR},
-      occupationType = #{occupationtype,jdbcType=INTEGER},
-      state = #{state,jdbcType=INTEGER},
-      idCard = #{idcard,jdbcType=INTEGER},
-      idNumber = #{idnumber,jdbcType=VARCHAR},
-      headPortrait = #{headportrait,jdbcType=VARCHAR},
-      frontOfDocument = #{frontofdocument,jdbcType=VARCHAR},
-      reverseOfDocuments = #{reverseofdocuments,jdbcType=VARCHAR},
-      beGoodAtShuShu = #{begoodatshushu,jdbcType=VARCHAR},
-      title = #{title,jdbcType=VARCHAR},
-      learningExperience = #{learningexperience,jdbcType=VARCHAR},
-      practitionersYear = #{practitionersyear,jdbcType=VARCHAR},
-      careerExperience = #{careerexperience,jdbcType=VARCHAR},
-      field = #{field,jdbcType=VARCHAR},
-      chargeSituation = #{chargesituation,jdbcType=VARCHAR},
-      channel = #{channel,jdbcType=INTEGER},
-      weixin = #{weixin,jdbcType=VARCHAR},
-      salaryExpectation = #{salaryexpectation,jdbcType=VARCHAR},
-      level = #{level,jdbcType=VARCHAR},
-      alipayName = #{alipayname,jdbcType=VARCHAR},
-      alipayAccount = #{alipayaccount,jdbcType=VARCHAR},
-      toExamine = #{toexamine,jdbcType=INTEGER}
-    where userId = #{userid,jdbcType=INTEGER}
-  </update>
 
   <select id="getUserInfoByNameAndPwd"   resultType="com.zf.demo4jsp.entity.UserInfo">
     SELECT
