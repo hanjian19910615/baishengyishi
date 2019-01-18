@@ -8,13 +8,10 @@ import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
-
 import java.util.List;
 import java.util.Random;
-
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.zf.demo4jsp.entity.Order;
 import com.zf.demo4jsp.entity.UserInfo;
 import com.zf.demo4jsp.mapper.UserInfoMapper;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
