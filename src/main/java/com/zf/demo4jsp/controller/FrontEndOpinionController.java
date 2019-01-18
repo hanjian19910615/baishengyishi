@@ -41,7 +41,6 @@ public class FrontEndOpinionController {
 
     /**
      * app意见反馈查询
-     *
      * @return mv
      */
     @RequestMapping("/selectOpinion")

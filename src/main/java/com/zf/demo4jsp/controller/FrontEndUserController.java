@@ -11,6 +11,10 @@ import com.aliyuncs.profile.IClientProfile;
 
 import java.util.List;
 import java.util.Random;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.zf.demo4jsp.entity.Order;
 import com.zf.demo4jsp.entity.UserInfo;
 import com.zf.demo4jsp.mapper.UserInfoMapper;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
@@ -158,15 +162,18 @@ public class FrontEndUserController {
      * @return
      */
     @RequestMapping("/selectByYiShi")
-    public ModelAndView selectByYiShi() {
+    public ModelAndView selectByYiShi(String pageNum) {
         ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
-        List<UserInfo> userInfos = userInfoMapper.selectByYiShi();//根据手机号进行数据匹配
-        if(userInfos!=null){//判断数据
-            mv.addObject("userInfos", userInfos);
-            mv.addObject("userInfosSuccess","1");//查询成功
+        if( pageNum.equals("0")){
+            PageHelper.startPage(1 , 10);//没有pageNum参数 默认第一页  pageSize每页10条数据
         }else{
-            mv.addObject("userInfosError","0");//查询失败
-        }
+            PageHelper.startPage(Integer.parseInt(pageNum) , 10);
+             }
+        List<UserInfo> userInfosList = userInfoMapper.selectByYiShi();//根据手机号进行数据匹配
+        PageInfo<UserInfo> orderPageInfo = new PageInfo<>(userInfosList);//得到分页的结果对象
+        List<UserInfo> pageList = orderPageInfo.getList();//得到分页中的person条目对象
+        mv.addObject("pages",orderPageInfo);//分页里面的数据 在前台展示
+        mv.addObject("userInfos",pageList);//用户信息
         return mv;
     }
 
