@@ -1,17 +1,14 @@
 package com.zf.demo4jsp.controller;
 
-import com.alibaba.fastjson.JSON;
+
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.domain.AlipayTradeAppPayModel;
-import com.alipay.api.internal.util.AlipaySignature;
 import com.alipay.api.request.AlipayTradeAppPayRequest;
 import com.alipay.api.response.AlipayTradeAppPayResponse;
 import com.zf.demo4jsp.entity.Order;
-import com.zf.demo4jsp.entity.bizContent;
 import com.zf.demo4jsp.mapper.OrderMapper;
-import net.sf.json.JSONObject;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -57,7 +54,7 @@ public class FrontEndOrderController {
      * @Param String userId
      */
     @RequestMapping("/orderById")
-    public ModelAndView orderList(int id) {
+    public ModelAndView orderById(int id) {
 
         ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
         Order order = orderMapper.selectByPrimaryKey(id);//查询全部数据
@@ -68,7 +65,7 @@ public class FrontEndOrderController {
     }
 
     /**
-     * app端订单详细接口
+     * app端删除订单接口
      *
      * @return
      * @Param String userId
@@ -132,7 +129,7 @@ public class FrontEndOrderController {
                mv.addObject("orderInfo",order1);
            }
         }else {
-            mv.addObject("添加订单失败");
+            mv.addObject("orderError","添加订单失败");
         }
         return mv;
     }
@@ -219,7 +216,7 @@ public class FrontEndOrderController {
     }
 
     /**
-     * app端支付宝和微信支付
+     * app支付宝或者微信返回的resltMessage修改订单状态
      * @Param String userId
      * @return count
      */
@@ -237,11 +234,8 @@ public class FrontEndOrderController {
                 mv.addObject("error","修改支付信息失败");
             }
         }
-
         return mv;
     }
-
-
     /**
      * 生成随机的6位数，短信验证码
      * @return

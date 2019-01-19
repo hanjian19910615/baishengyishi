@@ -353,7 +353,7 @@ public class LuozhuangTanZao {
     public static void main(String[] args) {
         LuozhuangTanZao test=new LuozhuangTanZao();
         try {
-            System.out.print( test.paipan("1995-3-1 1"));
+            System.out.print( test.paipan("1991-7-26 "));
             // TODO code application logic here
         } catch (ParseException ex) {
             Logger.getLogger(LuozhuangTanZao.class.getName()).log(Level.SEVERE, null, ex);

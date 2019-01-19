@@ -23,9 +23,9 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
 @Controller
 public class FrontEndUserController {
+
     @Autowired
     private UserInfoMapper userInfoMapper;
 
@@ -148,6 +148,7 @@ public class FrontEndUserController {
         if(userInfo!=null){//判断数据
             mv.addObject("userInfo", userInfo);
             mv.addObject("loginSuccess","1");//登录成功
+
         }else{
                 mv.addObject("loginError","0");//登录失败
         }
@@ -161,6 +162,7 @@ public class FrontEndUserController {
     @RequestMapping("/selectByYiShi")
     public ModelAndView selectByYiShi(String pageNum) {
         ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
+
         if( pageNum.equals("0")){
             PageHelper.startPage(1 , 10);//没有pageNum参数 默认第一页  pageSize每页10条数据
         }else{
@@ -171,6 +173,7 @@ public class FrontEndUserController {
         List<UserInfo> pageList = orderPageInfo.getList();//得到分页中的person条目对象
         mv.addObject("pages",orderPageInfo);//分页里面的数据 在前台展示
         mv.addObject("userInfos",pageList);//用户信息
+        mv.addObject("count",userInfosList.size());//用户信息
         return mv;
     }
 
@@ -190,7 +193,7 @@ public class FrontEndUserController {
     }
 
     /**
-     * 改修用户密码,手机号
+     * 修改用户密码,手机号
      * @Param  String pwd
      * @Param  String phone
      * @Param  String userId
