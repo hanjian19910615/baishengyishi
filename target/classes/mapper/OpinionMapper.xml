@@ -39,4 +39,12 @@
       </if>
     </trim>
   </insert>
+  <select id="opinionAll" parameterType="String" resultMap="BaseResultMap">
+    SELECT * FROM opinion
+    <where>
+      <if test="_parameter !=null">
+        opinioncontact like"%"#{opinioncontact,jdbcType=VARCHAR}"%"
+      </if>
+    </where>
+  </select>
 </mapper>

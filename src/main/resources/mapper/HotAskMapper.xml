@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zf.demo4jsp.mapper.HotAskMapper">
+  <resultMap id="BaseResultMap" type="com.zf.demo4jsp.entity.HotAsk">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="problem" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="answer" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="testCount" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="evaluateCount" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="evaluate" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, problem, answer, testCount, evaluateCount, evaluate
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from hotask
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from hotask
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zf.demo4jsp.entity.HotAsk">
+    insert into hotask (id, problem, answer, 
+      testCount, evaluateCount, evaluate
+      )
+    values (#{id,jdbcType=INTEGER}, #{problem,jdbcType=VARCHAR}, #{answer,jdbcType=VARCHAR}, 
+      #{testcount,jdbcType=INTEGER}, #{evaluatecount,jdbcType=INTEGER}, #{evaluate,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zf.demo4jsp.entity.HotAsk">
+    update hotask
+    <set>
+      <if test="problem != null">
+        problem = #{problem,jdbcType=VARCHAR},
+      </if>
+      <if test="answer != null">
+        answer = #{answer,jdbcType=VARCHAR},
+      </if>
+      <if test="testcount != null">
+        testCount = #{testcount,jdbcType=INTEGER},
+      </if>
+      <if test="evaluatecount != null">
+        evaluateCount = #{evaluatecount,jdbcType=INTEGER},
+      </if>
+      <if test="evaluate != null">
+        evaluate = #{evaluate,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <!--app热门测评查看全部信息-->
+  <select id="selectByAll"  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from hotask
+
+  </select>
+</mapper>

@@ -27,7 +27,7 @@
 <body>
 <div class="admin-content-body"style="" >
     <div class="am-cf am-padding am-padding-bottom-0" >
-        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">订单管理</strong><small></small></div>
+        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">意见反馈管理</strong><small></small></div>
     </div>
     <hr>
     <div class="am-g">
@@ -47,27 +47,22 @@
                 <table class="am-table am-table-striped am-table-hover table-main">
                     <thead>
                     <tr>
-                        <th>订单号 </th>
-                        <th>订单名称 </th>
-                        <th>订单金额</th>
-                        <th>订单时间</th>
-                        <th>订单人</th>
-                        <th>支付状态</th>
+                        <th>提问</th>
+                        <th>回答</th>
+                        <th>测试次数</th>
+                        <th>评价次数</th>
                         <th class="table-set">操作 </th>
                     </tr>
                     </thead>
                     <tbody id="tUser">
 
-                    <c:forEach items="${orders}" var="s" varStatus="st">
+                    <c:forEach items="${hotAsks}" var="s" varStatus="st">
                     <tr>
-                        <input type="hidden" id="userid" name="userid" value="${s.userid}"/>
-                        <td><a href="javascript:void(0)"></a>${s.ordernumber}</td>
-                        <td>${s.ordername}</td>
-                         <td>${s.orderamount}</td>
-                        <td ><fmt:formatDate value="${s.ordertime}" pattern="yyyy-MM-dd" /> </td>
-                        <td>${s.userid}</td>
-                        <c:if test="${s.paymentstatus==1}"><td>成功</c:if></td>
-                        <c:if test="${s.paymentstatus==2}"><td>失败</c:if></td>
+                        <input type="hidden" id="userid" name="userid" value="${s.id}"/>
+                        <td><a href="javascript:void(0)"></a>${s.problem}</td>
+                        <td></td>
+                        <td>${s.testcount}</td>
+                        <td>${s.evaluatecount}</td>
                         <td>
                             <div class="am-btn-toolbar">
                                 <div class="am-btn-group am-btn-group-xs">
@@ -96,69 +91,10 @@
 <script type="text/javascript" src="../../static/myplugs/js/plugs.js"></script>
 <script>
     $(function() {
-        //onloadUserInfo();
-        $("#chkAll").chkAll({
-        });
-        $(".btnedit").click(function() {
-
-            $.jq_Panel({
-                title: "修改角色",
-                iframeWidth: 500,
-                iframeHeight: 300,
-                url: "editRole.html"
-            });
-        });
-
-        $(".btnAdd").click(function() {
-
-            $.jq_Panel({
-                title: "添加角色",
-                iframeWidth: 500,
-                iframeHeight: 300,
-                url: "editRole.html"
-            });
-
-        });
+        opinionList();
     });
-    function sharesysfun(id) {
-        location.href = "shareRole.html";
-    }
-    //分页数据
-    $(document).ready(function () {
-        new pagination({
-            pagination:$('.pagination'),
-            maxPage: 7, //最大页码数,支持奇数，左右对称
-            startPage: 1,    //默认第一页
-            currentPage: ${pages.pageNum},      //当前页码
-            totalItemCount:  ${pages.size} ,    //项目总数,大于0，显示页码总数
-            totalPageCount: ${pages.pages},     //总页数
-            callback:function(pageNum){
-                window.location.href = "/order?pageNum="+pageNum;
-            }
-        });
-    });
-    //模糊查询
-    function search(){
-        var orderName=document.getElementById("orderName").value ;
-        window.location.href = "/order?orderName="+orderName;
-    }
-    //删除用户
-    function delUser(id){
-        // var txt=  "提示文字，提示文字，提示文字，提示文字，提示文字，提示文字";
-        // window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.confirm);
-        $.ajax({
-            type:"GET",
-            url:"/delUserInfo?userid="+id,
-            dataType:"json",
-            success:function(data){
-            if(data.success){
-                window.location.href = "/userInfo";
-            }else{
-                $("#searchResult").html("出现错误：" + data.msg);
-            }
-        },
-
-    });
+    function opinionList() {
+        window.location.href = "/opinionList";
     }
 
 </script>

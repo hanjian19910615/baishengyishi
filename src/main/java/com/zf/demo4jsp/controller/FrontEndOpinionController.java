@@ -54,4 +54,19 @@ public class FrontEndOpinionController {
         }
         return mv;
     }
+    /**
+     * app意见反馈查询
+     * @return mv
+     */
+    @RequestMapping("/countOpinion")
+    public ModelAndView countOpinion() {
+        ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
+        List<Opinion> opinions = opinionMapper.selectOpinion();
+        if(opinions!=null){
+            mv.addObject("opinions", opinions);//1代表成功
+        }else {
+            mv.addObject("opinions", opinions);//0代表错误
+        }
+        return mv;
+    }
 }

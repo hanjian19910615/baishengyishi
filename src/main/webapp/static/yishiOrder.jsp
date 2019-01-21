@@ -27,7 +27,7 @@
 <body>
 <div class="admin-content-body"style="" >
     <div class="am-cf am-padding am-padding-bottom-0" >
-        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">订单管理</strong><small></small></div>
+        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">易师订单管理</strong><small></small></div>
     </div>
     <hr>
     <div class="am-g">

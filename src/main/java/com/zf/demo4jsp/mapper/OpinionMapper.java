@@ -13,4 +13,6 @@ public interface OpinionMapper {
     int insertSelective(Opinion record);
 
     List<Opinion> selectOpinion();
+
+    List<Opinion> opinionAll(String opinioncontact);
 }

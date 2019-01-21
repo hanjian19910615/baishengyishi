@@ -113,15 +113,17 @@
         </div>
         <div class="sidebar-menu">
             <ul class="nav sidebar-nav">
-
                 <li>
                     <a class="accordion-toggle" href="../../static/role.jsp" target="right"> <span class="glyphicons glyphicons-settings"></span><span class="sidebar-title">用户管理</span><span class="caret"></span></a>
                 </li>
                 <li>
-                    <a class="accordion-toggle" href="depart.html" target="right"> <span class="glyphicons glyphicons-user"></span><span class="sidebar-title">八字管理</span><span class="caret"></span></a>
+                    <a class="accordion-toggle" href="../../static/bazi.jsp" target="right"> <span class="glyphicons glyphicons-user"></span><span class="sidebar-title">八字管理</span><span class="caret"></span></a>
                 </li>
                 <li>
                     <a class="accordion-toggle" href="../../static/order.jsp" target="right"><span class="glyphicons glyphicons-user"></span><span class="sidebar-title">订单管理</span><span class="caret"></span></a>
+                </li>
+                <li>
+                    <a class="accordion-toggle" href="../../static/yishiOrder.jsp"  target="right"><span class="glyphicons glyphicons-user"></span><span class="sidebar-title">易师订单</span><span class="caret"></span></a>
                 </li>
                 <li>
                     <a class="accordion-toggle" href="../../static/questionsandanswers.jsp" target="right"><span class="glyphicons glyphicons-tags"></span><span class="sidebar-title">问答管理</span><span class="caret"></span></a>
@@ -129,13 +131,15 @@
                 <li>
                     <a class="accordion-toggle" href="../../static/classIfication.jsp" target="right"><span class="glyphicons glyphicons-circle_question_mark"></span><span class="sidebar-title">标签管理</span><span class="caret"></span></a>
                 </li>
-                <%--<li>--%>
-                    <%--<a class="accordion-toggle" href="500.html" target="right"><span class="glyphicons glyphicons-circle_arrow_right"></span><span class="sidebar-title">500页面</span><span class="caret"></span></a>--%>
-                <%--</li>--%>
-
-                <%--<li>--%>
-                    <%--<a class="accordion-toggle" href="javascript:void(0)" onclick="updatePwd('修改密码',1)" target="right"><span class="glyphicons glyphicons-user"></span><span class="sidebar-title">修改密码</span><span class="caret"></span></a>--%>
-                <%--</li>--%>
+                <li>
+                    <a class="accordion-toggle" href="../../static/hostAsk.jsp" target="right"><span class="glyphicons glyphicons-circle_arrow_right"></span><span class="sidebar-title">热门提问</span><span class="caret"></span></a>
+                </li>
+                <li>
+                    <a class="accordion-toggle" href="../../static/opinion.jsp"  target="right"><span class="glyphicons glyphicons-user"></span><span class="sidebar-title">意见与反馈</span><span class="caret"></span></a>
+                </li>
+                <li>
+                    <a class="accordion-toggle" href="../../static/activity.jsp"  target="right"><span class="glyphicons glyphicons-user"></span><span class="sidebar-title">活动管理</span><span class="caret"></span></a>
+                </li>
             </ul>
         </div>
     </aside>

@@ -27,13 +27,13 @@
 <body>
 <div class="admin-content-body"style="" >
     <div class="am-cf am-padding am-padding-bottom-0" >
-        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">订单管理</strong><small></small></div>
+        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">八字管理</strong><small></small></div>
     </div>
     <hr>
     <div class="am-g">
         <div class="am-u-sm-12 am-u-md-3">
             <div class="am-input-group am-input-group-sm">
-                <input id="orderName" class="am-form-field" placeholder="请输入订单名称" type="text" value="${sname}">
+                <input id="opinioncontact" class="am-form-field" placeholder="请输入意见反馈" type="text" value="${opinioncontact}">
                 <span class="am-input-group-btn">
 									<button class="am-btn am-btn-default" type="button" id="btnsearch" onclick="search()">
 										搜索
@@ -47,27 +47,18 @@
                 <table class="am-table am-table-striped am-table-hover table-main">
                     <thead>
                     <tr>
-                        <th>订单号 </th>
-                        <th>订单名称 </th>
-                        <th>订单金额</th>
-                        <th>订单时间</th>
-                        <th>订单人</th>
-                        <th>支付状态</th>
+                        <th>意见反馈</th>
+                        <th>联系方式</th>
                         <th class="table-set">操作 </th>
                     </tr>
                     </thead>
                     <tbody id="tUser">
 
-                    <c:forEach items="${orders}" var="s" varStatus="st">
+                    <c:forEach items="${opinions}" var="s" varStatus="st">
                     <tr>
-                        <input type="hidden" id="userid" name="userid" value="${s.userid}"/>
-                        <td><a href="javascript:void(0)"></a>${s.ordernumber}</td>
-                        <td>${s.ordername}</td>
-                         <td>${s.orderamount}</td>
-                        <td ><fmt:formatDate value="${s.ordertime}" pattern="yyyy-MM-dd" /> </td>
-                        <td>${s.userid}</td>
-                        <c:if test="${s.paymentstatus==1}"><td>成功</c:if></td>
-                        <c:if test="${s.paymentstatus==2}"><td>失败</c:if></td>
+                        <input type="hidden" id="userid" name="userid" value="${s.id}"/>
+                        <td>${s.opinioncontact}</td>
+                        <td>${s.contactinformation}</td>
                         <td>
                             <div class="am-btn-toolbar">
                                 <div class="am-btn-group am-btn-group-xs">
@@ -133,14 +124,14 @@
             totalItemCount:  ${pages.size} ,    //项目总数,大于0，显示页码总数
             totalPageCount: ${pages.pages},     //总页数
             callback:function(pageNum){
-                window.location.href = "/order?pageNum="+pageNum;
+                window.location.href = "/opinionList?pageNum="+pageNum;
             }
         });
     });
     //模糊查询
     function search(){
-        var orderName=document.getElementById("orderName").value ;
-        window.location.href = "/order?orderName="+orderName;
+        var opinioncontact=document.getElementById("opinioncontact").value ;
+        window.location.href = "/opinionList?opinioncontact="+opinioncontact;
     }
     //删除用户
     function delUser(id){
