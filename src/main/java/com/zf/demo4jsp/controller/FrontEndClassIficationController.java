@@ -32,45 +32,6 @@ public class FrontEndClassIficationController {
         }
         return mv;
     }
-//    /**
-//     * app端订单详细接口
-//     * @Param  String userId
-//     * @return
-//     */
-//    @RequestMapping("/orderById")
-//    public ModelAndView orderList(int id ) {
-//
-//        ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
-//        Order order = orderMapper.selectByPrimaryKey(id);//查询全部数据
-//        if(order!=null){//判断数据
-//            mv.addObject("order", order);
-//        }
-//        return mv;
-//    }
-//
-//    /**
-//     * app端订单详细接口
-//     * @Param  String userId
-//     * @return
-//     */
-//    @RequestMapping("/delOrder")
-//    public ModelAndView delOrder(Integer orderId ) {
-//        Integer id=orderId;
-//        ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
-//        Order order = orderMapper.selectByPrimaryKey(id);//查询全部数据
-//        if(order!=null){//判断数据
-//            order.setDisableenable(0);
-//            order.setId(id);
-//            int count = orderMapper.updateByPrimaryKeySelective(order);//(假删除)删除订单 修改订单状态为0
-//            if(count==1){
-//                mv.addObject("delSuccess", "1");
-//            }else{
-//                mv.addObject("delError", "0");
-//            }
-//        }
-//        return mv;
-//    }
-
 
 
 }

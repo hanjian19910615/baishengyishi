@@ -197,8 +197,11 @@
     <include refid="Base_Column_List" />
     from userinfo
     <where>
-      <if test="_parameter !=null">
-          username like"%"#{username,jdbcType=VARCHAR}"%"
+      <if test="username !=null">
+          and username like"%"#{username,jdbcType=VARCHAR}"%"
+      </if>
+      <if test="state !=null">
+        and state =#{state,jdbcType=INTEGER}
       </if>
     </where>
   </select>

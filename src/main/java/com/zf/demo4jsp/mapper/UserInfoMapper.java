@@ -17,7 +17,7 @@ public interface UserInfoMapper  {
     UserInfo selectByPrimaryKey(Integer userid);
     int updateByPrimaryKeySelective(UserInfo record);
     UserInfo getUserInfoByNameAndPwd(Model model, HttpServletRequest request, @Param("username") String username, @Param("pwd") String pwd );
-    List<UserInfo> selectUserInfoAll(String username);
+    List<UserInfo> selectUserInfoAll(@Param("username")String username,@Param("state")int state);
     //----------------------------------app端-----------------------------------------------------
    //根据手机号查询数据（无的话进行注册）
     UserInfo selectUserByPhone(String phone );

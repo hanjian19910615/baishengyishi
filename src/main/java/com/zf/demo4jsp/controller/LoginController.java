@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import java.util.List;
 
@@ -43,25 +45,50 @@ public class LoginController {
             return "login";
         } else {
             model.addAttribute("userInfo", userInfo);
-            return "main";
+            return "index";
         }
     }
 
     //用户信息
     @RequestMapping("/userInfo")
-    public String userInfo(Model model, HttpServletRequest request, @Param("pageNum") String pageNum, @Param("username") String username) {
+    public ModelAndView userInfo( @Param("pageNum") String pageNum, @Param("username") String username,int state) {
+        ModelAndView mv = new ModelAndView();
         if (pageNum != null) {
             PageHelper.startPage(Integer.parseInt(pageNum), 10);
         } else {
             PageHelper.startPage(1, 10);//没有pageNum参数 默认第一页  pageSize每页10条数据
         }
-        List<UserInfo> userInfoList = userInfoMapper.selectUserInfoAll(username);//查询全部数据 参数：username模糊查询
+        List<UserInfo> userInfoList = userInfoMapper.selectUserInfoAll(username,state);//查询全部数据 参数：username模糊查询
         PageInfo<UserInfo> userInfoPageInfo = new PageInfo<>(userInfoList);//得到分页的结果对象
         List<UserInfo> pageList = userInfoPageInfo.getList();//得到分页中的person条目对象
-        model.addAttribute("pages", userInfoPageInfo);//分页里面的数据 在前台展示
-        model.addAttribute("userInfos", pageList);//用户信息
-        model.addAttribute("sname", username);//数据回显
-        return "role";//返回到用户管理页面
+        mv.addObject("pages", userInfoPageInfo);//分页里面的数据 在前台展示
+        mv.addObject("userInfos", pageList);//用户信息
+        mv.addObject("sname", username);//数据回显
+        if(state==1){
+            mv.addObject("ysInfos");
+        }else{
+            mv.addObject("userInfo");
+        }
+
+        return mv;//返回到用户管理页面
+    }
+    //用户信息
+    @RequestMapping("/yishiInfo")
+    public ModelAndView yishiInfo( @Param("pageNum") String pageNum, @Param("username") String username,int state) {
+        ModelAndView mv = new ModelAndView();
+        if (pageNum != null) {
+            PageHelper.startPage(Integer.parseInt(pageNum), 10);
+        } else {
+            PageHelper.startPage(1, 10);//没有pageNum参数 默认第一页  pageSize每页10条数据
+        }
+        List<UserInfo> userInfoList = userInfoMapper.selectUserInfoAll(username,state);//查询全部数据 参数：username模糊查询
+        PageInfo<UserInfo> userInfoPageInfo = new PageInfo<>(userInfoList);//得到分页的结果对象
+        List<UserInfo> pageList = userInfoPageInfo.getList();//得到分页中的person条目对象
+        mv.addObject("pages", userInfoPageInfo);//分页里面的数据 在前台展示
+        mv.addObject("yishiInfos", pageList);//用户信息
+        mv.addObject("sname", username);//数据回显
+       mv.addObject("yishiInfo");
+        return mv;//返回到用户管理页面
     }
 
 

@@ -31,7 +31,7 @@ public class OrderController {
             mv.addObject("pages",orderPageInfo);//分页里面的数据 在前台展示
             mv.addObject("orders",pageList);//用户信息
             mv.addObject("orderName",orderName);//数据回显
-            mv.setViewName("order");
+            mv.setViewName("userOrder");
             return mv;//返回到用户管理页面
         }
 
