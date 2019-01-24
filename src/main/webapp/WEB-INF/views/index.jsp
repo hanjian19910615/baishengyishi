@@ -14,7 +14,6 @@
         <div class="layui-logo"> 后台管理</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-
         </ul>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
@@ -30,7 +29,6 @@
             <li class="layui-nav-item" ><a href="javascript:;" onclick="goBack()" >退了</a></li>
         </ul>
     </div>
-
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
@@ -47,7 +45,6 @@
                     <dl class="layui-nav-child">
                         <dd><a href="../../static/userOrder.jsp">用户订单</a></dd>
                         <dd><a href="role.html">易师订单</a></dd>
-
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -92,96 +89,30 @@
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;">标签管理</a>
-
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;">易师审核管理</a>
-
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">财务</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="upload.html">代金券</a></dd>
+                        <dd><a href="upload.html">金币</a></dd>
+                        <dd><a href="upload.html">账单</a></dd>
+                    </dl>
                 </li>
             </ul>
         </div>
     </div>
-
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">
             <fieldset class="layui-elem-field">
-                <legend>控制台-系统信息</legend>
-                <div class="layui-field-box">
-                    <table class="layui-table">
-                        <colgroup>
-                            <col width="150">
-                            <col width="200">
-                            <col>
-                        </colgroup>
-                        <thead>
-                        <tr>
-                            <th>昵称</th>
-                            <th>加入时间</th>
-                            <th>签名</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>贤心</td>
-                            <td>2016-11-29</td>
-                            <td>人生就像是一场修行</td>
-                        </tr>
-                        <tr>
-                            <td>许闲心</td>
-                            <td>2016-11-28</td>
-                            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
-                        </tr>
-                        <tr>
-                            <td>sentsin</td>
-                            <td>2016-11-27</td>
-                            <td> Life is either a daring adventure or nothing.</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </fieldset>
-            <fieldset class="layui-elem-field">
-                <legend>控制台-最新公告</legend>
-                <div class="layui-field-box">
-                    <table class="layui-table">
-                        <colgroup>
-                            <col width="150">
-                            <col width="200">
-                            <col>
-                        </colgroup>
-                        <thead>
-                        <tr>
-                            <th>昵称</th>
-                            <th>加入时间</th>
-                            <th>签名</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>贤心</td>
-                            <td>2016-11-29</td>
-                            <td>人生就像是一场修行</td>
-                        </tr>
-                        <tr>
-                            <td>许闲心</td>
-                            <td>2016-11-28</td>
-                            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
-                        </tr>
-                        <tr>
-                            <td>sentsin</td>
-                            <td>2016-11-27</td>
-                            <td> Life is either a daring adventure or nothing.</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <legend >控 制 台</legend>
+                <div class="layui-field-box" style="background: url(../../static/image/sunmin.jpg); height: 550px">
                 </div>
             </fieldset>
         </div>
-    </div>
-
-    <div class="layui-footer">
-
     </div>
 </div>
 <script type="text/javascript" src="../../static/javascript/jquery.min.js"></script>
