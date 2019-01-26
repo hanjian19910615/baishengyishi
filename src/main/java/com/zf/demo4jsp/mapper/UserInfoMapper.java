@@ -18,11 +18,11 @@ public interface UserInfoMapper  {
     int updateByPrimaryKeySelective(UserInfo record);
     UserInfo getUserInfoByNameAndPwd(Model model, HttpServletRequest request, @Param("username") String username, @Param("pwd") String pwd );
     List<UserInfo> selectUserInfoAll(@Param("username")String username,@Param("state")int state);
+    int deleteByPrimaryKey(Integer userid);
     //----------------------------------app端-----------------------------------------------------
    //根据手机号查询数据（无的话进行注册）
     UserInfo selectUserByPhone(String phone );
     UserInfo login(@Param("phone")String phone ,@Param("pwd")String pwd);
-
     //查询全部易师
     List<UserInfo> selectByYiShi();
 }

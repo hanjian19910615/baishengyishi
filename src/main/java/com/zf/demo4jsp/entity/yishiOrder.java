@@ -27,7 +27,11 @@ public class yishiOrder {
 
     private String yishiname;
 
-    public yishiOrder(Integer id, String ordernumber, String orderamount, String ordername, Date ordertime, String userid, String paymentstatus, String solutionstate, String ordertype, String username, String yishiid, String yishiname) {
+    private String imgpath;
+
+    public yishiOrder(Integer id, String ordernumber, String orderamount, String ordername, Date ordertime, String userid,
+                      String paymentstatus, String solutionstate, String ordertype, String username, String yishiid,
+                      String yishiname,String imgpath) {
         this.id = id;
         this.ordernumber = ordernumber;
         this.orderamount = orderamount;
@@ -40,6 +44,7 @@ public class yishiOrder {
         this.username = username;
         this.yishiid = yishiid;
         this.yishiname = yishiname;
+        this.imgpath = imgpath;
     }
 
     public yishiOrder() {
@@ -141,4 +146,13 @@ public class yishiOrder {
     public void setYishiname(String yishiname) {
         this.yishiname = yishiname == null ? null : yishiname.trim();
     }
+
+    public String getImgPath() {
+        return imgpath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgpath = imgpath == null ? null : imgpath.trim();
+    }
+
 }

@@ -16,12 +16,14 @@
             <arg column="userType" jdbcType="VARCHAR" javaType="java.lang.String"/>
             <arg column="orderTypeMX" jdbcType="VARCHAR" javaType="java.lang.String"/>
             <arg column="userName" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="yishiAnswers" jdbcType="VARCHAR" javaType="java.lang.String"/>
+
         </constructor>
     </resultMap>
     <sql id="Base_Column_List">
     id, orderNumber, orderName, orderAmount, orderTime,
     userId, paymentStatus,orderType,disableEnable,solutionState
-    userType,orderTypeMX,userName
+    userType,orderTypeMX,userName,yishiAnswers
   </sql>
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select
@@ -89,8 +91,9 @@
     <select id="selectOrderAll" parameterType="String" resultMap="BaseResultMap">
         SELECT * FROM `order`
         <where>
+             disableEnable=1
             <if test="_parameter !=null">
-                orderName like"%"#{orderName,jdbcType=VARCHAR}"%"
+               and  orderName like"%"#{orderName,jdbcType=VARCHAR}"%"
             </if>
         </where>
     </select>

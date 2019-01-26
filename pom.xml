@@ -5,7 +5,7 @@
     <groupId>com.zf</groupId>
     <artifactId>demo4jsp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>demo4jsp</name>
     <description>Demo project for Spring Boot</description>
     <parent>
@@ -128,6 +128,13 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
@@ -142,5 +149,19 @@
                 </configuration>
             </plugin>
         </plugins>
+        <!--<resources>-->
+            <!--<resource>-->
+                <!--<directory>src/main/resources</directory>-->
+                <!--<includes>-->
+                    <!--<include>application.properties</include>-->
+                    <!--<include>datasource.properties</include>-->
+                    <!--<include>dgeneratorConfig.xml</include>-->
+                    <!--<include>mybatis-config.xml</include>-->
+                <!--</includes>-->
+
+            <!--</resource>-->
+        <!--</resources>-->
+
+
     </build>
 </project>

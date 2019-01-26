@@ -16,7 +16,11 @@ public class Order {
     private String usertype;
     private String ordertypemx;
     private String username;
-    public Order(Integer id, String ordernumber, String ordername, String orderamount, Date ordertime, String userid, String paymentstatus, String ordertype, Integer disableenable, Integer solutionstate, String usertype, String ordertypemx, String username) {
+    private String yishianswers;
+    public Order(Integer id, String ordernumber, String ordername, String orderamount,
+                 Date ordertime, String userid, String paymentstatus, String ordertype,
+                 Integer disableenable, Integer solutionstate, String usertype, String ordertypemx,
+                 String username,String yishianswers) {
         this.id = id;
         this.ordernumber = ordernumber;
         this.ordername = ordername;
@@ -30,6 +34,7 @@ public class Order {
         this.usertype = usertype;
         this.ordertypemx = ordertypemx;
         this.username = username;
+        this.yishianswers = yishianswers;
     }
     public Order() {
         super();
@@ -106,11 +111,17 @@ public class Order {
     public void setOrdertypemx(String ordertypemx) {
         this.ordertypemx = ordertypemx == null ? null : ordertypemx.trim();
     }
-
     public String getUsername() {
         return username;
     }
     public void setUsername(String username) {
         this.username = username == null ? null : username.trim();
     }
+    public String getYishianswers() {
+        return yishianswers;
+    }
+    public void setYishianswers(String yishianswers) {
+        this.yishianswers = yishianswers == null ? null : yishianswers.trim();
+    }
+
 }

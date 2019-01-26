@@ -15,98 +15,57 @@
       <arg column="userName" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="yishiId" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="yishiName" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="imgPath" jdbcType="VARCHAR" javaType="java.lang.String" />
+
     </constructor>
   </resultMap>
   <insert id="insert" parameterType="com.zf.demo4jsp.entity.yishiOrder" >
     insert into yishiorder (id, orderNumber, orderAmount, 
       orderName, orderTime, userId, 
       paymentStatus, solutionState, orderType, 
-      userName, yishiId, yishiName
+      userName, yishiId, yishiName,imgPath
       )
     values (#{id,jdbcType=INTEGER}, #{ordernumber,jdbcType=VARCHAR}, #{orderamount,jdbcType=VARCHAR}, 
       #{ordername,jdbcType= VARCHAR}, #{ordertime,jdbcType=DATE}, #{userid,jdbcType=VARCHAR},
       #{paymentstatus,jdbcType=VARCHAR}, #{solutionstate,jdbcType=VARCHAR}, #{ordertype,jdbcType=VARCHAR}, 
-      #{username,jdbcType=VARCHAR}, #{yishiid,jdbcType=VARCHAR}, #{yishiname,jdbcType=VARCHAR}
+      #{username,jdbcType=VARCHAR}, #{yishiid,jdbcType=VARCHAR}, #{yishiname,jdbcType=VARCHAR},#{imgpath,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.zf.demo4jsp.entity.yishiOrder" >
 
-    insert into yishiorder
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
+  <select id="selectyisiOrderAll" parameterType="String" resultMap="BaseResultMap">
+    SELECT * FROM yishiorder
+  </select>
+
+<!--app端查询易师订单接口-->
+  <select id="selectyisiOrderById" parameterType="String" resultMap="BaseResultMap">
+    SELECT
+    *
+    FROM yishiorder
+    <where>
+      yishiid=#{yishiId,jdbcType=VARCHAR}
+      <if test="orderType !=null">
+        and ordertype = #{orderType,jdbcType=VARCHAR}
       </if>
-      <if test="ordernumber != null" >
-        orderNumber,
-      </if>
-      <if test="orderamount != null" >
-        orderAmount,
-      </if>
-      <if test="ordername != null" >
-        orderName,
-      </if>
-      <if test="ordertime != null" >
-        orderTime,
-      </if>
-      <if test="userid != null" >
-        userId,
-      </if>
-      <if test="paymentstatus != null" >
-        paymentStatus,
-      </if>
-      <if test="solutionstate != null" >
-        solutionState,
-      </if>
-      <if test="ordertype != null" >
-        orderType,
-      </if>
-      <if test="username != null" >
-        userName,
-      </if>
-      <if test="yishiid != null" >
-        yishiId,
-      </if>
-      <if test="yishiname != null" >
-        yishiName,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="ordernumber != null" >
-        #{ordernumber,jdbcType=VARCHAR},
-      </if>
-      <if test="orderamount != null" >
-        #{orderamount,jdbcType=VARCHAR},
-      </if>
-      <if test="ordername != null" >
-        #{ordername,jdbcType=VARCHAR},
-      </if>
-      <if test="ordertime != null" >
-        #{ordertime,jdbcType=DATE},
-      </if>
-      <if test="userid != null" >
-        #{userid,jdbcType=VARCHAR},
-      </if>
-      <if test="paymentstatus != null" >
-        #{paymentstatus,jdbcType=VARCHAR},
-      </if>
-      <if test="solutionstate != null" >
-        #{solutionstate,jdbcType=VARCHAR},
-      </if>
-      <if test="ordertype != null" >
-        #{ordertype,jdbcType=VARCHAR},
-      </if>
-      <if test="username != null" >
-        #{username,jdbcType=VARCHAR},
-      </if>
-      <if test="yishiid != null" >
-        #{yishiid,jdbcType=VARCHAR},
-      </if>
-      <if test="yishiname != null" >
-        #{yishiname,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
+    </where>
+  </select>
+
+  <!--app端查询易师今日订单接口-->
+  <select id="selectyisiOrderByToday" parameterType="String" resultMap="BaseResultMap">
+    select * from yishiorder  y where to_days(y.orderTime) = to_days(now())
+    AND y.yishiid=#{yishiId,jdbcType=VARCHAR}
+  </select>
+
+  <!--app端查询易师昨日订单接口-->
+  <select id="selectyisiOrderByYesterday" parameterType="String" resultMap="BaseResultMap">
+    SELECT * FROM yishiorder y WHERE TO_DAYS( NOW( ) ) - TO_DAYS( y.orderTime) = 1
+    AND y.yishiid=#{yishiId,jdbcType=VARCHAR}
+  </select>
+
+  <!--app端查询易师上月订单接口-->
+  <select id="selectyisiOrderByLastMonth" parameterType="String" resultMap="BaseResultMap">
+    SELECT * FROM yishiorder WHERE PERIOD_DIFF( date_format( now( ) , '%Y%m' ) ,date_format( orderTime, '%Y%m' ) ) =1
+    AND yishiid=#{yishiId,jdbcType=VARCHAR}
+  </select>
+
+
 </mapper>
