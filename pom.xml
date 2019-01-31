@@ -149,19 +149,5 @@
                 </configuration>
             </plugin>
         </plugins>
-        <!--<resources>-->
-            <!--<resource>-->
-                <!--<directory>src/main/resources</directory>-->
-                <!--<includes>-->
-                    <!--<include>application.properties</include>-->
-                    <!--<include>datasource.properties</include>-->
-                    <!--<include>dgeneratorConfig.xml</include>-->
-                    <!--<include>mybatis-config.xml</include>-->
-                <!--</includes>-->
-
-            <!--</resource>-->
-        <!--</resources>-->
-
-
     </build>
 </project>

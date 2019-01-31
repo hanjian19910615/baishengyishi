@@ -30,6 +30,7 @@
       #{paymentstatus,jdbcType=VARCHAR}, #{solutionstate,jdbcType=VARCHAR}, #{ordertype,jdbcType=VARCHAR}, 
       #{username,jdbcType=VARCHAR}, #{yishiid,jdbcType=VARCHAR}, #{yishiname,jdbcType=VARCHAR},#{imgpath,jdbcType=VARCHAR}
       )
+
   </insert>
 
   <select id="selectyisiOrderAll" parameterType="String" resultMap="BaseResultMap">

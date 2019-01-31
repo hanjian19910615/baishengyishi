@@ -65,9 +65,9 @@ public class LoginController {
         mv.addObject("userInfos", pageList);//用户信息
         mv.addObject("sname", username);//数据回显
         if(state==1){
-            mv.addObject("ysInfos");
+            mv.addObject("user/ysInfos");
         }else{
-            mv.addObject("userInfo");
+            mv.addObject("user/userInfo");
         }
 
         return mv;//返回到用户管理页面

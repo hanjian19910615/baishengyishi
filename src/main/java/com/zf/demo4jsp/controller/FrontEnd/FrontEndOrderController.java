@@ -8,7 +8,11 @@ import com.alipay.api.domain.AlipayTradeAppPayModel;
 import com.alipay.api.request.AlipayTradeAppPayRequest;
 import com.alipay.api.response.AlipayTradeAppPayResponse;
 import com.zf.demo4jsp.entity.Order;
+import com.zf.demo4jsp.entity.UserInfo;
+import com.zf.demo4jsp.entity.yishiOrder;
 import com.zf.demo4jsp.mapper.OrderMapper;
+import com.zf.demo4jsp.mapper.UserInfoMapper;
+import com.zf.demo4jsp.mapper.yishiOrderMapper;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,6 +33,10 @@ public class FrontEndOrderController {
 
     @Autowired
     private OrderMapper orderMapper;
+    @Autowired
+    private UserInfoMapper userInfoMapper;
+    @Autowired
+    private yishiOrderMapper yishiOrderMapper;
 
     /**
      * app端订单接口
@@ -95,14 +103,18 @@ public class FrontEndOrderController {
      * @Param Order record
      */
     @RequestMapping("/addOrder")
-    public ModelAndView addOrder(HttpServletRequest request, String userInfoStr) {
+    public ModelAndView addOrder(HttpServletRequest request, String userInfoStr,String yishiStr) {
         ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
+        System.out.println("======"+yishiStr);
+        Order order = new Order();
+        yishiOrder  ysOrder = new yishiOrder();
         HttpSession session = request.getSession();
         System.out.println(userInfoStr);
-      //  String aa="30,韩建,情感婚恋,0.01,3,1,侧是是是是是是是";
         String[] array= userInfoStr.split(",");
-        Order order = new Order();
+        String msgCode = getMsgCodeRandom();//生成随机数
+        order.setOrdernumber(msgCode);
         for (int i = 0; i < array.length; i++) {
+            //用户订单信息
             order.setUserid(array[0]);//订单人id
             order.setUsername(array[1]);//订单人名称
             order.setOrdername(array[2]);//订单名称
@@ -113,17 +125,32 @@ public class FrontEndOrderController {
             order.setDisableenable(1);
             order.setSolutionstate(0);
             order.setOrdertime(new Date());
+            //易师订单信息
+            ysOrder.setOrdernumber(msgCode);//订单号
+            ysOrder.setOrderamount("");//易师的金额
+            ysOrder.setOrdername(array[2]);//订单名称
+            ysOrder.setOrdertime(order.getOrdertime());//订单时间
+            ysOrder.setUserid(array[0]);//订单人id
+            ysOrder.setUsername(array[1]);//订单人名称
+            ysOrder.setPaymentstatus("0");//支付状态 已支付
+            ysOrder.setSolutionstate("0");//解决状态 未解决
+            ysOrder.setOrdertype("1");//订单类型 1提问 2亲测
         }
-        //请保证OutTradeNo值每次保证唯一
-        String msgCode = getMsgCodeRandom();//生成随机数
-        order.setOrdernumber(msgCode);
         order.setOrdertype("1");
         session.setAttribute("ordNum",order.getOrdernumber());
-            int count =orderMapper.insert(order);
+        int count =orderMapper.insert(order);
         if (count==1){
-            mv.addObject("添加订单成功");
+            String[] yishiArray= yishiStr.split("-");
+            for (int i = 0; i < yishiArray.length; i++) {
+                System.out.println(yishiArray[i]);
+                UserInfo u = userInfoMapper.selectByPrimaryKey(Integer.parseInt(yishiArray[i]));
+                ysOrder.setYishiid(String.valueOf(u.getUserid()));
+                ysOrder.setYishiname(u.getUsername());
+                ysOrder.setOrderamount(u.getYishiamount());
+               int count1 =  yishiOrderMapper.insert(ysOrder);
+            }
+           mv.addObject("添加订单成功");
            String ordNum= (String)session.getAttribute("ordNum");
-           //System.out.println(ordNum);
            Order order1=orderMapper.selectOrderByorderNumber(ordNum);
            if(order1!=null){
                mv.addObject("orderInfo",order1);

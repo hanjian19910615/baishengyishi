@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zf.demo4jsp.mapper.AgencyMapper" >
+  <resultMap id="BaseResultMap" type="com.zf.demo4jsp.entity.Agency" >
+    <constructor >
+      <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="industry" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="understanding" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="wechat" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="phone" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="idCardfrontImg" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="idCardfrontContrary" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="createTime" jdbcType="DATE" javaType="java.util.Date" />
+      <arg column="address" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, industry, name, understanding, wechat, phone, idCardfrontImg, idCardfrontContrary, 
+    createTime, address
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from agency
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from agency
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zf.demo4jsp.entity.Agency" >
+    insert into agency (id, industry, name, 
+      understanding, wechat, phone, 
+      idCardfrontImg, idCardfrontContrary, createTime, 
+      address)
+    values (#{id,jdbcType=INTEGER}, #{industry,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{understanding,jdbcType=VARCHAR}, #{wechat,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{idcardfrontimg,jdbcType=VARCHAR}, #{idcardfrontcontrary,jdbcType=VARCHAR}, #{createtime,jdbcType=DATE}, 
+      #{address,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zf.demo4jsp.entity.Agency" >
+    insert into agency
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="industry != null" >
+        industry,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="understanding != null" >
+        understanding,
+      </if>
+      <if test="wechat != null" >
+        wechat,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="idcardfrontimg != null" >
+        idCardfrontImg,
+      </if>
+      <if test="idcardfrontcontrary != null" >
+        idCardfrontContrary,
+      </if>
+      <if test="createtime != null" >
+        createTime,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="industry != null" >
+        #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="understanding != null" >
+        #{understanding,jdbcType=VARCHAR},
+      </if>
+      <if test="wechat != null" >
+        #{wechat,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="idcardfrontimg != null" >
+        #{idcardfrontimg,jdbcType=VARCHAR},
+      </if>
+      <if test="idcardfrontcontrary != null" >
+        #{idcardfrontcontrary,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=DATE},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zf.demo4jsp.entity.Agency" >
+    update agency
+    <set >
+      <if test="industry != null" >
+        industry = #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="understanding != null" >
+        understanding = #{understanding,jdbcType=VARCHAR},
+      </if>
+      <if test="wechat != null" >
+        wechat = #{wechat,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="idcardfrontimg != null" >
+        idCardfrontImg = #{idcardfrontimg,jdbcType=VARCHAR},
+      </if>
+      <if test="idcardfrontcontrary != null" >
+        idCardfrontContrary = #{idcardfrontcontrary,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createTime = #{createtime,jdbcType=DATE},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zf.demo4jsp.entity.Agency" >
+    update agency
+    set industry = #{industry,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      understanding = #{understanding,jdbcType=VARCHAR},
+      wechat = #{wechat,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      idCardfrontImg = #{idcardfrontimg,jdbcType=VARCHAR},
+      idCardfrontContrary = #{idcardfrontcontrary,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=DATE},
+      address = #{address,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
