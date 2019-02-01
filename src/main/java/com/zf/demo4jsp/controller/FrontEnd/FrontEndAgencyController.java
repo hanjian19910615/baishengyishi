@@ -41,13 +41,13 @@ public class FrontEndAgencyController {
         agency.setAddress(address);
         agency.setCreatetime(new Date());
         agency.setIdcardfrontcontrary(idCardfrontContrary);
-
-       int count = agencyMapper.insert(agency);
-       if(count==1){
+       int count = agencyMapper.insert(agency);//添加代理数据
+       if(count==1){//表示成功
            mv.addObject("agencySuccess","1");
-       }else{
+       }else{//表示失败
            mv.addObject("agencyError","0");
        }
         return mv;//返回到用户管理页面
     }
+
 }

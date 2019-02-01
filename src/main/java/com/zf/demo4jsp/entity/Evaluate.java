@@ -20,8 +20,14 @@ public class Evaluate {
     private String yishiid;
 
     private String ordernumber;
+    private String orderName;
 
-    public Evaluate(Integer id, String content, String createtime, String userid, String username, String yishiname, String evaluationvalue, String starlevel, String yishiid, String ordernumber) {
+
+
+    public Evaluate(Integer id, String content, String createtime,
+                    String userid, String username,
+                    String yishiname, String evaluationvalue,
+                    String starlevel, String yishiid, String ordernumber,String orderName) {
         this.id = id;
         this.content = content;
         this.createtime = createtime;
@@ -32,6 +38,7 @@ public class Evaluate {
         this.starlevel = starlevel;
         this.yishiid = yishiid;
         this.ordernumber = ordernumber;
+        this.orderName = orderName;
     }
 
     public Evaluate() {
@@ -116,5 +123,12 @@ public class Evaluate {
 
     public void setOrdernumber(String ordernumber) {
         this.ordernumber = ordernumber == null ? null : ordernumber.trim();
+    }
+    public String getOrderName() {
+        return orderName;
+    }
+
+    public void setOrderName(String orderName) {
+        this.orderName = orderName == null ? null : orderName.trim();
     }
 }

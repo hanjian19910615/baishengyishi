@@ -7,12 +7,15 @@ import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.domain.AlipayTradeAppPayModel;
 import com.alipay.api.request.AlipayTradeAppPayRequest;
 import com.alipay.api.response.AlipayTradeAppPayResponse;
+import com.github.wxpay.sdk.WXPay;
 import com.zf.demo4jsp.entity.Order;
 import com.zf.demo4jsp.entity.UserInfo;
 import com.zf.demo4jsp.entity.yishiOrder;
 import com.zf.demo4jsp.mapper.OrderMapper;
 import com.zf.demo4jsp.mapper.UserInfoMapper;
 import com.zf.demo4jsp.mapper.yishiOrderMapper;
+import com.zf.demo4jsp.until.MD5Util;
+import com.zf.demo4jsp.until.WXMyConfigUtil;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +24,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import javax.servlet.http.HttpSession;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -37,6 +41,8 @@ public class FrontEndOrderController {
     private UserInfoMapper userInfoMapper;
     @Autowired
     private yishiOrderMapper yishiOrderMapper;
+
+
 
     /**
      * app端订单接口
@@ -200,7 +206,7 @@ public class FrontEndOrderController {
      * @return count
      */
     @RequestMapping("/pay")
-    public ModelAndView  pay(int payStatus,String totalAmount,String outTradeNo,String subject){
+    public ModelAndView  pay(int payStatus,String totalAmount,String outTradeNo,String subject)throws Exception{
         ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
         if(payStatus==1){//支付宝
             String APP_ID="2019011262875331";
@@ -237,7 +243,45 @@ public class FrontEndOrderController {
                 e.printStackTrace();
             }
         }else{//微信支付
+            System.err.println("进入微信支付申请");
+            Date now = new Date();
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");//可以方便地修改日期格式
+            String hehe = dateFormat.format(now);
 
+            String out_trade_no=hehe+"wxpay";  //777777 需要前端给的参数
+            String total_fee="1";              //7777777  微信支付钱的单位为分
+            String user_id="1";               //77777
+            String coupon_id="7";               //777777
+
+            String attach=user_id+","+coupon_id;
+            WXMyConfigUtil config = new WXMyConfigUtil();
+//        String spbill_create_ip = GetIPAddrUtil.getIpAddr(req);
+            String spbill_create_ip="39.96.162.19";
+            System.err.println(spbill_create_ip);
+            Map<String,String> result = dounifiedOrder(attach,outTradeNo,totalAmount,spbill_create_ip,1);
+            String nonce_str = (String)result.get("nonce_str");
+            String prepay_id = (String)result.get("prepay_id");
+            Long time =System.currentTimeMillis()/1000;
+            String timestamp=time.toString();
+
+            //签名生成算法
+            MD5Util md5Util = new MD5Util();
+            Map<String,String> map = new HashMap<>();
+            map.put("appid",config.getAppID());
+            map.put("partnerid",config.getMchID());
+            map.put("package","Sign=WXPay");
+            map.put("noncestr",nonce_str);
+            map.put("timestamp",timestamp);
+            map.put("prepayid",prepay_id);
+            String sign = md5Util.getSign(map);
+
+            String resultString="{\"appid\":\""+config.getAppID()+"\",\"partnerid\":\""+config.getMchID()+"\",\"package\":\"Sign=WXPay\"," +
+                    "\"noncestr\":\""+nonce_str+"\",\"timestamp\":"+timestamp+"," +
+                    "\"prepayid\":\""+prepay_id+"\",\"sign\":\""+sign+"\"}";
+            System.err.println(resultString);
+
+            //return resultString;
+            mv.addObject("orderString",resultString);
         }
         return mv;
     }
@@ -276,4 +320,65 @@ public class FrontEndOrderController {
         }
         return code.toString();//返回6位随机数
     }
+
+
+
+
+    public Map<String, String> dounifiedOrder(String attach, String out_trade_no, String total_fee,String spbill_create_ip,int type) throws Exception {
+        Map<String, String> fail = new HashMap<>();
+        MD5Util md5Util = new MD5Util();
+        WXMyConfigUtil config = new WXMyConfigUtil();
+        WXPay wxpay = new WXPay(config);
+        Map<String, String> data = new HashMap<String, String>();
+        String body="订单支付";
+        data.put("body", body);
+        data.put("out_trade_no", out_trade_no);//订单号
+        data.put("total_fee", "1");//金额
+        data.put("spbill_create_ip",spbill_create_ip);
+        //异步通知地址（请注意必须是外网）
+        data.put("notify_url", "http://1y8723.51mypc.cn:21813/api/wxpay/notify");
+
+        data.put("trade_type", "APP");
+        //data.put("attach", attach);
+//        data.put("sign", md5Util.getSign(data));
+        StringBuffer url= new StringBuffer();
+        try {
+            Map<String, String> resp = wxpay.unifiedOrder(data);
+            System.out.println(resp);
+            String returnCode = resp.get("return_code");    //获取返回码
+            String returnMsg = resp.get("return_msg");
+
+            if("SUCCESS".equals(returnCode)){       //若返回码为SUCCESS，则会返回一个result_code,再对该result_code进行判断
+                String resultCode = (String)resp.get("result_code");
+                String errCodeDes = (String)resp.get("err_code_des");
+                System.out.print(errCodeDes);
+                if("SUCCESS".equals(resultCode)){
+                    //获取预支付交易回话标志
+                    Map<String,String> map = new HashMap<>();
+                    String prepay_id = resp.get("prepay_id");
+                    String signType = "MD5";
+                    map.put("prepay_id",prepay_id);
+                    map.put("signType",signType);
+                    String sign = md5Util.getSign(map);
+                    resp.put("realsign",sign);
+                    url.append("prepay_id="+prepay_id+"&signType="+signType+ "&sign="+sign);
+                    return resp;
+                }else {
+
+                    url.append(errCodeDes);
+                }
+            }else {
+
+                url.append(returnMsg);
+            }
+
+        } catch (Exception e) {
+            System.out.println("aaaaaaaaaaaaa");
+            System.out.println(e);
+
+        }
+        return fail;
+    }
+
+
 }

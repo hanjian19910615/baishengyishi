@@ -16,6 +16,7 @@
       <arg column="yishiId" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="yishiName" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="imgPath" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="countSolutionState" jdbcType="VARCHAR" javaType="java.lang.String" />
 
     </constructor>
   </resultMap>
@@ -67,6 +68,35 @@
     SELECT * FROM yishiorder WHERE PERIOD_DIFF( date_format( now( ) , '%Y%m' ) ,date_format( orderTime, '%Y%m' ) ) =1
     AND yishiid=#{yishiId,jdbcType=VARCHAR}
   </select>
+<!--查询易师订单未解决的订单-->
+  <select id="selectyisiSolutionState" parameterType="String"  resultMap="BaseResultMap">
+   SELECT
+  id, orderNumber, orderAmount, orderName,
+  orderTime, userId, paymentStatus,
+  solutionState, orderType,
+  userName, yishiId, yishiName,
+  imgPath,COUNT( solutionState ) as countSolutionState
+  FROM
+  yishiorder
+  WHERE
+  yishiId = #{yishiId,jdbcType=VARCHAR}
+  AND solutionState = '0'
+  ORDER BY orderTime ASC LIMIT 1
+  </select>
 
+  <select id="selectyisiSolutionStateAll" parameterType="String"  resultMap="BaseResultMap">
+   SELECT
+  id, orderNumber, orderAmount, orderName,
+  orderTime, userId, paymentStatus,
+  solutionState, orderType,
+  userName, yishiId, yishiName,
+  imgPath,countSolutionState
+  FROM
+  yishiorder
+  WHERE
+  yishiId = #{yishiId,jdbcType=VARCHAR}
+  AND solutionState = '0'
+  ORDER BY orderTime ASC
+  </select>
 
 </mapper>

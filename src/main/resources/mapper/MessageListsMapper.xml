@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zf.demo4jsp.mapper.MessageListsMapper" >
+  <resultMap id="BaseResultMap" type="com.zf.demo4jsp.entity.MessageLists" >
+    <constructor >
+      <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="title" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="content" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="state" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="crateTime" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="type" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="countState" jdbcType="VARCHAR" javaType="java.lang.String" />
+
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, title, content, state, crateTime, type
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from messagelists
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from messagelists
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zf.demo4jsp.entity.MessageLists" >
+    insert into messagelists (id, title, content, 
+      state, crateTime, type
+      )
+    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, 
+      #{state,jdbcType=VARCHAR}, #{cratetime,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zf.demo4jsp.entity.MessageLists" >
+    update messagelists
+    <set >
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="cratetime != null" >
+        crateTime = #{cratetime,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectMessageListsByState" resultMap="BaseResultMap"  >
+   SELECT
+	id,
+	title,
+	content,
+	state,
+	crateTime,
+	type,
+	COUNT( state )  as countState
+FROM
+	messagelists
+WHERE
+	  state = '0'  ORDER BY  crateTime LIMIT 1
+  </select>
+
+  <select id="selectMessageListsByAll" resultMap="BaseResultMap"  >
+   SELECT
+	id,
+	title,
+	content,
+	state,
+	crateTime,
+	type,
+	countState
+FROM
+	messagelists
+WHERE
+	  state = '0'  ORDER BY  crateTime DESC
+  </select>
+
+
+</mapper>

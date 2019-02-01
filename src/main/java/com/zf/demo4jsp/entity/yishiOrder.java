@@ -13,13 +13,14 @@ public class yishiOrder {
 
     private Date ordertime;
 
-    private String userid;
+
 
     private String paymentstatus;
 
     private String solutionstate;
 
     private String ordertype;
+    private String userid;
 
     private String username;
 
@@ -29,9 +30,11 @@ public class yishiOrder {
 
     private String imgpath;
 
+    private String countSolutionState;
+
     public yishiOrder(Integer id, String ordernumber, String orderamount, String ordername, Date ordertime, String userid,
                       String paymentstatus, String solutionstate, String ordertype, String username, String yishiid,
-                      String yishiname,String imgpath) {
+                      String yishiname,String imgpath,String countSolutionState) {
         this.id = id;
         this.ordernumber = ordernumber;
         this.orderamount = orderamount;
@@ -45,6 +48,7 @@ public class yishiOrder {
         this.yishiid = yishiid;
         this.yishiname = yishiname;
         this.imgpath = imgpath;
+        this.countSolutionState = countSolutionState;
     }
 
     public yishiOrder() {
@@ -153,6 +157,14 @@ public class yishiOrder {
 
     public void setImgPath(String imgPath) {
         this.imgpath = imgpath == null ? null : imgpath.trim();
+    }
+
+    public String getCountSolutionState() {
+        return countSolutionState;
+    }
+
+    public void setCountSolutionState(String countSolutionState) {
+        this.countSolutionState = countSolutionState == null ? null : countSolutionState.trim();
     }
 
 }

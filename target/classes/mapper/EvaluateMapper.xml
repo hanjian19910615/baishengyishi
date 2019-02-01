@@ -13,11 +13,14 @@
       <arg column="starLevel" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="yishiId" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="orderNumber" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="orderName" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="yishiImg" jdbcType="VARCHAR" javaType="java.lang.String" />
+
     </constructor>
   </resultMap>
   <sql id="Base_Column_List" >
-    id, content, createTime, userId, userName, yishiName, evaluationValue, starLevel, 
-    yishiId, orderNumber
+    id, content, createTime, userId, userName, yishiName, evaluationValue, starLevel,
+    yishiId, orderNumber,orderName
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -30,12 +33,12 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.zf.demo4jsp.entity.Evaluate" >
-    insert into evaluate (id, content, createTime, 
-      userId, userName, yishiName, 
-      evaluationValue, starLevel, yishiId, 
+    insert into evaluate (id, content, createTime,
+      userId, userName, yishiName,
+      evaluationValue, starLevel, yishiId,
       orderNumber)
-    values (#{id,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, #{createtime,jdbcType=VARCHAR}, 
-      #{userid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{yishiname,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{content,jdbcType=VARCHAR}, #{createtime,jdbcType=VARCHAR},
+      #{userid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{yishiname,jdbcType=VARCHAR},
       #{evaluationvalue,jdbcType=VARCHAR}, #{starlevel,jdbcType=VARCHAR}, #{yishiid,jdbcType=VARCHAR},
       #{ordernumber,jdbcType=VARCHAR})
   </insert>
