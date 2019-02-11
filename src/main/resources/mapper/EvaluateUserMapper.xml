@@ -12,6 +12,7 @@
 			<arg column="content" jdbcType="VARCHAR" javaType="java.lang.String"/>
 			<arg column="headPortrait" jdbcType="VARCHAR" javaType="java.lang.String" />
 			<arg column="yishiAmount" jdbcType="VARCHAR" javaType="java.lang.String" />
+			<arg column="createTime" jdbcType="VARCHAR" javaType="java.lang.String" />
 		</constructor>
     </resultMap>
 
@@ -26,8 +27,8 @@ SELECT
 	e.orderName,
 	e.content,
 	u.headPortrait,
-	u.yishiAmount
-
+	u.yishiAmount,
+	e.createTime
 FROM
 	evaluate e
 	LEFT JOIN userinfo u ON e.yishiId=u.userId

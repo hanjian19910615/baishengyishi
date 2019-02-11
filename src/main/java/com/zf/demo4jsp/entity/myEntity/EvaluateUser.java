@@ -10,7 +10,7 @@ public class EvaluateUser {
     private String content;
     private String headportrait;
     private String yishiamount;
-//    private String createtime;
+    private String createtime;
 //    private String yishiimg;
 
 
@@ -20,8 +20,8 @@ public class EvaluateUser {
     public EvaluateUser(Integer id, String userid, String username,
                         String yishiid, String yishiname
                         ,String orderName , String content
-                        ,String headportrait, String yishiamount
-//                        , String createtime,String yishiimg
+                        ,String headportrait, String yishiamount,
+                         String createtime
     ) {
         this.id = id;
         this.userid = userid;
@@ -32,7 +32,7 @@ public class EvaluateUser {
         this.content = content;
         this.headportrait = headportrait;
         this.yishiamount = yishiamount;
-//        this.createtime = createtime;
+        this.createtime = createtime;
 //        this.yishiimg = yishiimg;
     }
 
@@ -108,13 +108,13 @@ public class EvaluateUser {
         this.yishiamount = yishiamount;
     }
 //
-//    public String getCreatetime() {
-//        return createtime;
-//    }
-//
-//    public void setCreatetime(String yishiimg) {
-//        this.yishiimg = yishiimg;
-//    }
+    public String getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(String createtime) {
+        this.createtime = createtime;
+    }
 //    public String getYishiimg() {
 //        return yishiimg;
 //    }

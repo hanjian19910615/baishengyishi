@@ -248,14 +248,12 @@ public class FrontEndOrderController {
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");//可以方便地修改日期格式
             String hehe = dateFormat.format(now);
 
-            String out_trade_no=hehe+"wxpay";  //777777 需要前端给的参数
-            String total_fee="1";              //7777777  微信支付钱的单位为分
+//            String out_trade_no=hehe+"wxpay";  //777777 需要前端给的参数
+//            String total_fee="1";              //7777777  微信支付钱的单位为分
             String user_id="1";               //77777
             String coupon_id="7";               //777777
-
             String attach=user_id+","+coupon_id;
             WXMyConfigUtil config = new WXMyConfigUtil();
-//        String spbill_create_ip = GetIPAddrUtil.getIpAddr(req);
             String spbill_create_ip="39.96.162.19";
             System.err.println(spbill_create_ip);
             Map<String,String> result = dounifiedOrder(attach,outTradeNo,totalAmount,spbill_create_ip,1);
@@ -325,6 +323,8 @@ public class FrontEndOrderController {
 
 
     public Map<String, String> dounifiedOrder(String attach, String out_trade_no, String total_fee,String spbill_create_ip,int type) throws Exception {
+        int number = Integer.parseInt(total_fee);//转换金额
+        int money=number*100;//乘以100倍
         Map<String, String> fail = new HashMap<>();
         MD5Util md5Util = new MD5Util();
         WXMyConfigUtil config = new WXMyConfigUtil();
@@ -333,14 +333,11 @@ public class FrontEndOrderController {
         String body="订单支付";
         data.put("body", body);
         data.put("out_trade_no", out_trade_no);//订单号
-        data.put("total_fee", "1");//金额
+        data.put("total_fee", String.valueOf(money));//金额
         data.put("spbill_create_ip",spbill_create_ip);
         //异步通知地址（请注意必须是外网）
         data.put("notify_url", "http://1y8723.51mypc.cn:21813/api/wxpay/notify");
-
         data.put("trade_type", "APP");
-        //data.put("attach", attach);
-//        data.put("sign", md5Util.getSign(data));
         StringBuffer url= new StringBuffer();
         try {
             Map<String, String> resp = wxpay.unifiedOrder(data);
@@ -364,7 +361,6 @@ public class FrontEndOrderController {
                     url.append("prepay_id="+prepay_id+"&signType="+signType+ "&sign="+sign);
                     return resp;
                 }else {
-
                     url.append(errCodeDes);
                 }
             }else {

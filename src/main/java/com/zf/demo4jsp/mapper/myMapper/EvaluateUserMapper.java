@@ -10,10 +10,6 @@ import java.util.List;
 @Mapper
 @Component(value ="EvaluateUserMapper")
 public interface EvaluateUserMapper {
-
     List<EvaluateUser>  selectEvaluateUser();
-//
-//    List<yishiOrderEvaluate> selectyisiRanking();
-//    List<yishiOrderEvaluate>  selectyisiOrderNumberRanking();
 
 }
