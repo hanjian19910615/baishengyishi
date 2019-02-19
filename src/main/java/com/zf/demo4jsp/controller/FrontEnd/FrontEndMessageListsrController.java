@@ -15,7 +15,7 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import java.util.List;
 
 /**
- * app消息列表
+ * app易师消息列表
  *
  * @return
  */

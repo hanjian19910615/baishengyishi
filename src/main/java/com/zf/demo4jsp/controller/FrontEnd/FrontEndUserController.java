@@ -129,6 +129,8 @@ public class FrontEndUserController {
                 UserInfo user = new UserInfo();
                 user.setPhone(phone);
                 user.setPwd(pwd);
+                user.setUsername("易粉");
+                user.setState(2);
                 int count = userInfoMapper.insert(user);
                 if (count == 1) {
                     Coupon coupon = new Coupon();

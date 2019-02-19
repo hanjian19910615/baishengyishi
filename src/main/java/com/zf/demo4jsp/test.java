@@ -3,7 +3,7 @@ package com.zf.demo4jsp;
 public class test {
 
     public static void main(String[] args) {
-        String date="1991-01-21";
+        String date="1991-07-26";
         int num1=Integer.parseInt(date.substring(0,1)) ;//1
         int num2= Integer.parseInt(date.substring(1,2));//9
         int num3= Integer.parseInt(date.substring(2,3));//9
@@ -25,10 +25,6 @@ public class test {
         int newNunber1=Integer.parseInt(strNum.substring(0,1));
         int newNunber2=Integer.parseInt(strNum.substring(1,2));
         int newNunber3 = newNunber1+newNunber2;
-
-//        if(){
-//
-//        }
         System.out.println("CCCCCC====="+newNunber3);
 
 

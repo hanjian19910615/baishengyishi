@@ -29,6 +29,9 @@ public class FrontEndClassIficationController {
         List<ClassIfication> classIficationList = classIficationMapper.classIficationByIdAll(parentid);//查询全部数据
         if(classIficationList!=null){//判断数据
             mv.addObject("classIficationList", classIficationList);
+            mv.addObject("classIficationSuccess", "1");
+        }else{
+            mv.addObject("classIficationError", "0");
         }
         return mv;
     }

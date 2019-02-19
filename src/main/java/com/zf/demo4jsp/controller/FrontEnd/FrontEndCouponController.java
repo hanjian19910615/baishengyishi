@@ -27,16 +27,15 @@ public class FrontEndCouponController {
      * @Param Order record
      */
     @RequestMapping("/selectCouponByUserId")
-    public ModelAndView selectCouponByUserId(String userId  ) {
+    public ModelAndView selectCouponByUserId(String userId ) {
         ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
         Coupon coupon= couponMapper.selectByUserId(userId);
         if(coupon!=null){
                 mv.addObject("couponSuccess","1");
                 mv.addObject("amount",coupon.getAmount());
-
             }
         else{
-            mv.addObject("userInfoNull","2");
+            mv.addObject("couponError","0");
         }
         return mv;
     }

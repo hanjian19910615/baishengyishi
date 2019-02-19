@@ -2,16 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="994496fd-2fdf-4ad8-af4f-3492204d0b6d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/xingzuoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/yunshiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndClassIficationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndClassIficationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndCouponController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndCouponController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndEightCharactersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndEightCharactersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndMessageListsrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndMessageListsrController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/myEntity/EvaluateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/myEntity/EvaluateUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/myMapper/EvaluateUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/myMapper/EvaluateUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EvaluateUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EvaluateUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/controller/FrontEnd/FrontEndClassIficationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/controller/FrontEnd/FrontEndClassIficationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/controller/FrontEnd/FrontEndCouponController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/controller/FrontEnd/FrontEndCouponController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/controller/FrontEnd/FrontEndEightCharactersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/controller/FrontEnd/FrontEndEightCharactersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/controller/FrontEnd/FrontEndOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/controller/FrontEnd/FrontEndOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/controller/FrontEnd/FrontEndUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/controller/FrontEnd/FrontEndUserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiHomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiHomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/entity/myEntity/EvaluateUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/entity/myEntity/EvaluateUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/EvaluateUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/EvaluateUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zf/demo4jsp/test.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +41,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiHomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3597">
-              <caret line="129" column="40" selection-start-line="129" selection-start-column="22" selection-end-line="129" selection-end-column="40" />
+            <state relative-caret-position="304">
+              <caret line="168" column="52" selection-start-line="168" selection-start-column="52" selection-end-line="168" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#digitalLife#0;class#FrontEndYiShiHomeController#0" />
+                <element signature="method#uckolTBroadcast#0;class#FrontEndYiShiHomeController#0" />
+                <element signature="method#net#0;class#FrontEndYiShiHomeController#0" />
+                <element signature="method#urlencode#0;class#FrontEndYiShiHomeController#0" />
+                <element signature="method#guanYinLingQian#0;class#FrontEndYiShiHomeController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="62" column="72" selection-start-line="62" selection-start-column="72" selection-end-line="62" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AstrologyFortuneMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="57" column="39" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="39" />
+              <folding>
+                <element signature="n#insert#1;n#mapper#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/AstrologyFortuneMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="8" column="41" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,19 +92,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/myMapper/EvaluateUserMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/AgencyMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+            <state relative-caret-position="132">
+              <caret line="6" selection-start-line="6" selection-end-line="7" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndAgencyController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/AstrologyFortune.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1452">
-              <caret line="44" column="26" lean-forward="true" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+            <state relative-caret-position="-917">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/yishiOrderMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="84" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/yunshiTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="117" column="24" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndOrderController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-783">
+              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,41 +148,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/datasource.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="37" selection-start-column="21" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndOrderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="338" column="81" selection-start-line="338" selection-start-column="81" selection-end-line="338" selection-end-column="81" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#updateOrederPaymentstatus#0;class#FrontEndOrderController#0" />
-                <element signature="docComment;method#getMsgCodeRandom#0;class#FrontEndOrderController#0" />
-                <element signature="method#getMsgCodeRandom#0;class#FrontEndOrderController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/afterEnd/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="330">
+              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -116,8 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>1.4.2.RELEASE</find>
-      <find>spring-boot-maven-plugin</find>
       <find>删除</find>
       <find>dw-delete</find>
       <find>order</find>
@@ -137,6 +184,17 @@
       <find>yishiAmount</find>
       <find>headPortrait</find>
       <find>total_fee</find>
+      <find>classIficationByIdAll</find>
+      <find>\n</find>
+      <find>APPKEY</find>
+      <find>getRequest1</find>
+      <find>\t</find>
+      <find>urlencode</find>
+      <find>add</find>
+      <find>insert</find>
+      <find>yishiOrderList</find>
+      <find>messageListsr</find>
+      <find>7-1-4</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -145,17 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userOrder/userOrderDetails.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userOrder/userOrder.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/yishiOrder/yishiOrder.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/afterEnd/yishiOrderController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndUserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/afterEnd/ysOrderController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/yishiOrder.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/afterEnd/EvaluateController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndCouponController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/afterEnd/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/userOrder.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/yishiInfo.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/yishiTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/datasource.properties" />
@@ -165,7 +212,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndHomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/SlideshowMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/myMapper/yishiOrderEvaluateMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/MessageLists.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/MiniprogramConfig.java" />
@@ -175,10 +221,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/wxTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/MessageListsMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/MessageListsMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndMessageListsrController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/until/WXMyConfigUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/yishiOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiOrderController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/SlideshowMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/yishiOrderMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/yishiOrderEvaluateMapper.xml" />
@@ -190,12 +234,26 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/myMapper/evaluateUserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/evaluateUserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/myEntity/yishiOrderEvaluate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiHomeController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/EvaluateUserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/myEntity/EvaluateUser.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndOrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/myMapper/EvaluateUserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiOrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndClassIficationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndCouponController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndEightCharactersController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndMessageListsrController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndOrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/yunshiTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/xingzuoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/guanyinTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/AstrologyFortuneMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/AstrologyFortuneMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiHomeController.java" />
       </list>
     </option>
   </component>
@@ -286,7 +344,23 @@
               <item name="baishengyishi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo4jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baishengyishi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baishengyishi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="baishengyishi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="baishengyishi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="baishengyishi" type="b2602c69:ProjectViewProjectNode" />
@@ -309,18 +383,18 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549099137462" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550572085681" />
     <property name="last_opened_file_path" value="D:/felord-WePay-1.0.4" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\hanjian\baishengyishi\src\main\resources\mapper" />
       <recent name="D:\hanjian\baishengyishi\src\main\resources\config" />
-      <recent name="D:\hanjian\baishengyishi\src\main\resources\mapper\myMapper" />
-      <recent name="D:\hanjian\baishengyishi\src\main\webapp\WEB-INF\views\yishiOrder" />
-      <recent name="D:\hanjian\baishengyishi\src\main\java\com\zf\demo4jsp\controller\afterEnd" />
+      <recent name="D:\hanjian\baishengyishi\src\main\resources" />
+      <recent name="D:\hanjian\baishengyishi\src\main\java\com\zf\demo4jsp\mapper" />
+      <recent name="D:\hanjian\baishengyishi\src\main\webapp\WEB-INF\views\user" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zf.demo4jsp.mapper.myMapper" />
@@ -328,12 +402,12 @@
       <recent name="com.zf.demo4jsp.controller.FrontEnd" />
       <recent name="com.zf.demo4jsp.controller.afterEnd" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\hanjian\baishengyishi\src\main\resources\config" />
-      <recent name="D:\hanjian\baishengyishi\src\main\resources" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\hanjian\baishengyishi\src\main\resources\mapper" />
-      <recent name="D:\hanjian\baishengyishi\src\main\java\com\zf\demo4jsp\mapper" />
-      <recent name="D:\hanjian\baishengyishi\src\main\webapp\WEB-INF\views\user" />
+      <recent name="D:\hanjian\baishengyishi\src\main\resources\config" />
+      <recent name="D:\hanjian\baishengyishi\src\main\resources\mapper\myMapper" />
+      <recent name="D:\hanjian\baishengyishi\src\main\webapp\WEB-INF\views\yishiOrder" />
+      <recent name="D:\hanjian\baishengyishi\src\main\java\com\zf\demo4jsp\controller\afterEnd" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -349,8 +423,47 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Demo4jspApplication">
-    <configuration name="wxTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zf.demo4jsp.wxTest" />
+    <configuration name="guanyinTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zf.demo4jsp.guanyinTest" />
+      <module name="demo4jsp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zf.demo4jsp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zf.demo4jsp.test" />
+      <module name="demo4jsp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zf.demo4jsp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="xingzuoTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zf.demo4jsp.xingzuoTest" />
+      <module name="demo4jsp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zf.demo4jsp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="yunshiTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zf.demo4jsp.yunshiTest" />
       <module name="demo4jsp" />
       <extension name="coverage">
         <pattern>
@@ -401,14 +514,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.wxTest" />
+      <item itemvalue="Application.test" />
+      <item itemvalue="Application.yunshiTest" />
+      <item itemvalue="Application.xingzuoTest" />
       <item itemvalue="Maven.demo4jsp [mybatis-generator:generate]" />
       <item itemvalue="Spring Boot.Demo4jspApplication" />
+      <item itemvalue="Application.guanyinTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Demo4jspApplication" />
-        <item itemvalue="Application.wxTest" />
+        <item itemvalue="Application.guanyinTest" />
+        <item itemvalue="Application.yunshiTest" />
+        <item itemvalue="Application.xingzuoTest" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -452,18 +571,24 @@
       <workItem from="1548377299775" duration="21875000" />
       <workItem from="1548423967782" duration="30243000" />
       <workItem from="1548896085195" duration="72046000" />
-      <workItem from="1549845025502" duration="7965000" />
+      <workItem from="1549845025502" duration="9753000" />
+      <workItem from="1549933608032" duration="3788000" />
+      <workItem from="1550018914216" duration="19291000" />
+      <workItem from="1550105018005" duration="10113000" />
+      <workItem from="1550191446633" duration="457000" />
+      <workItem from="1550192423764" duration="36507000" />
+      <workItem from="1550538096246" duration="27007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121510000" />
+    <option name="totallyTimeSpent" value="220461000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.826215" visible="true" weight="0.2636103" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.826215" visible="true" weight="0.24498567" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -473,25 +598,25 @@
       <window_info id="Web" order="7" sideWeight="0.17378497" side_tool="true" weight="0.26217765" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.66621804" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49856734" visible="true" weight="0.14939435" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49856734" visible="true" weight="0.10497981" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" />
-      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.49856734" weight="0.21938089" />
+      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.49856734" weight="0.059219383" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32974428" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.35397038" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143266" side_tool="true" weight="0.19919246" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.067294754" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.51951545" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.17900404" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" sideWeight="0.49893844" weight="0.021489972" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven" order="5" sideWeight="0.49893844" visible="true" weight="0.021489972" />
       <window_info anchor="right" id="Database" order="6" weight="0.3295129" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -517,146 +642,15 @@
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndMessageListsrController.java</url>
-          <line>77</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/xingzuoTest.java</url>
+          <line>11</line>
           <properties />
-          <option name="timeStamp" value="28" />
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/UserInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.6/tomcat-embed-core-8.5.6.jar!/org/apache/coyote/http11/Http11Processor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="418" selection-start-line="418" selection-end-line="418" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.4.RELEASE/spring-web-4.3.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/mapping/SlideshowMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/OpinionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/SlideshowMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="19" selection-start-line="19" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/Slideshow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/MessageLists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="85" column="64" selection-start-line="85" selection-start-column="64" selection-end-line="85" selection-end-column="64" />
-          <folding>
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1093#1094#0" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
-            <element signature="e#1199#1200#0" expanded="true" />
-            <element signature="e#1235#1236#0" expanded="true" />
-            <element signature="e#1267#1268#0" expanded="true" />
-            <element signature="e#1317#1318#0" expanded="true" />
-            <element signature="e#1393#1394#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2046">
-          <caret line="62" column="65" selection-start-line="62" selection-start-column="65" selection-end-line="62" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/MiniprogramConfig.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/service/WXPayService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/OrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/apiclient_key.pem">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndOpinionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/Demo4jspApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/wxTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -698,47 +692,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/until/WXMyConfigUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="36" column="47" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#986#987#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MessageListsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="65" column="33" lean-forward="true" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/afterEnd/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndMessageListsrController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -749,13 +706,6 @@
           <folding>
             <element signature="n#update#0;n#mapper#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/yishiOrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="69" column="11" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -783,13 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiOrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1572">
-          <caret line="131" column="91" selection-start-line="131" selection-start-column="91" selection-end-line="131" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/UserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -810,27 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/HotAskMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/AgencyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -858,23 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="40" column="81" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiHomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3597">
-          <caret line="129" column="40" selection-start-line="129" selection-start-column="22" selection-end-line="129" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/afterEnd/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -886,13 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="37" selection-start-column="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -914,17 +816,155 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/wxpay/wxpay-sdk/0.0.3/wxpay-sdk-0.0.3.jar!/com/github/wxpay/sdk/WXPayConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/until/WXMyConfigUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/myMapper/EvaluateUserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        <state relative-caret-position="330">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndAgencyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1452">
-          <caret line="44" column="26" lean-forward="true" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+        <state relative-caret-position="340">
+          <caret line="47" column="36" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/ClassIficationMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="61" column="47" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ClassIficationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="71" column="35" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndClassIficationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="33" column="45" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndCouponController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndEightCharactersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3762">
+          <caret line="122" column="41" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="235" column="11" lean-forward="true" selection-start-line="235" selection-start-column="11" selection-end-line="235" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndHotAskController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="132" column="31" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MessageListsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2145">
+          <caret line="65" column="33" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndMessageListsrController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndEvaluateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/xingzuoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/guanyinTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -933,13 +973,100 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndOrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="338" column="81" selection-start-line="338" selection-start-column="81" selection-end-line="338" selection-end-column="81" />
+        <state relative-caret-position="-783">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updateOrederPaymentstatus#0;class#FrontEndOrderController#0" />
-            <element signature="docComment;method#getMsgCodeRandom#0;class#FrontEndOrderController#0" />
-            <element signature="method#getMsgCodeRandom#0;class#FrontEndOrderController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/yunshiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="117" column="24" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="62" column="72" selection-start-line="62" selection-start-column="72" selection-end-line="62" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AgencyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2838">
+          <caret line="25" column="6" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/yishiOrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="84" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/entity/AstrologyFortune.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-917">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/AgencyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" selection-start-line="6" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AstrologyFortuneMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="57" column="39" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="39" />
+          <folding>
+            <element signature="n#insert#1;n#mapper#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/mapper/AstrologyFortuneMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zf/demo4jsp/controller/FrontEnd/FrontEndYiShiHomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="168" column="52" selection-start-line="168" selection-start-column="52" selection-end-line="168" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#digitalLife#0;class#FrontEndYiShiHomeController#0" />
+            <element signature="method#uckolTBroadcast#0;class#FrontEndYiShiHomeController#0" />
+            <element signature="method#net#0;class#FrontEndYiShiHomeController#0" />
+            <element signature="method#urlencode#0;class#FrontEndYiShiHomeController#0" />
+            <element signature="method#guanYinLingQian#0;class#FrontEndYiShiHomeController#0" />
           </folding>
         </state>
       </provider>

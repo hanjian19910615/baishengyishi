@@ -46,7 +46,6 @@ public class FrontEndOrderController {
 
     /**
      * app端订单接口
-     *
      * @return
      * @Param String userId
      * @Param String paymentStatus
@@ -57,10 +56,12 @@ public class FrontEndOrderController {
         List<Order> orderList = orderMapper.selectOrderByUserIdAll(userId, paymentStatus);//查询全部数据
         if (orderList != null) {//判断数据
             mv.addObject("orderList", orderList);
+            mv.addObject("success", "1");
+        }else{
+            mv.addObject("error", "0");
         }
         return mv;
     }
-
     /**
      * app端订单详细接口
      *
@@ -69,7 +70,6 @@ public class FrontEndOrderController {
      */
     @RequestMapping("/orderById")
     public ModelAndView orderById(int id) {
-
         ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
         Order order = orderMapper.selectByPrimaryKey(id);//查询全部数据
         if (order != null) {//判断数据
@@ -109,7 +109,9 @@ public class FrontEndOrderController {
      * @Param Order record
      */
     @RequestMapping("/addOrder")
-    public ModelAndView addOrder(HttpServletRequest request, String userInfoStr,String yishiStr) {
+    public ModelAndView addOrder(HttpServletRequest request,
+                                 String userInfoStr,
+                                 String yishiStr) {
         ModelAndView mv = new ModelAndView(new MappingJackson2JsonView());
         System.out.println("======"+yishiStr);
         Order order = new Order();
@@ -261,7 +263,6 @@ public class FrontEndOrderController {
             String prepay_id = (String)result.get("prepay_id");
             Long time =System.currentTimeMillis()/1000;
             String timestamp=time.toString();
-
             //签名生成算法
             MD5Util md5Util = new MD5Util();
             Map<String,String> map = new HashMap<>();
@@ -272,7 +273,6 @@ public class FrontEndOrderController {
             map.put("timestamp",timestamp);
             map.put("prepayid",prepay_id);
             String sign = md5Util.getSign(map);
-
             String resultString="{\"appid\":\""+config.getAppID()+"\",\"partnerid\":\""+config.getMchID()+"\",\"package\":\"Sign=WXPay\"," +
                     "\"noncestr\":\""+nonce_str+"\",\"timestamp\":"+timestamp+"," +
                     "\"prepayid\":\""+prepay_id+"\",\"sign\":\""+sign+"\"}";
@@ -298,9 +298,9 @@ public class FrontEndOrderController {
             record.setOrdernumber(orderNumber);
             int count = orderMapper.updateOrederPaymentstatus(record);
             if(count==1){
-                mv.addObject("success","修改支付信息成功");
+                mv.addObject("success","1");
             }else{
-                mv.addObject("error","修改支付信息失败");
+                mv.addObject("error","0");
             }
         }
         return mv;
@@ -319,12 +319,9 @@ public class FrontEndOrderController {
         return code.toString();//返回6位随机数
     }
 
-
-
-
     public Map<String, String> dounifiedOrder(String attach, String out_trade_no, String total_fee,String spbill_create_ip,int type) throws Exception {
-        int number = Integer.parseInt(total_fee);//转换金额
-        int money=number*100;//乘以100倍
+        Double number = Double.parseDouble(total_fee);//转换金额
+        Double money=number*100;//乘以100倍
         Map<String, String> fail = new HashMap<>();
         MD5Util md5Util = new MD5Util();
         WXMyConfigUtil config = new WXMyConfigUtil();
@@ -333,7 +330,7 @@ public class FrontEndOrderController {
         String body="订单支付";
         data.put("body", body);
         data.put("out_trade_no", out_trade_no);//订单号
-        data.put("total_fee", String.valueOf(money));//金额
+        data.put("total_fee", "1");//金额
         data.put("spbill_create_ip",spbill_create_ip);
         //异步通知地址（请注意必须是外网）
         data.put("notify_url", "http://1y8723.51mypc.cn:21813/api/wxpay/notify");
@@ -344,7 +341,6 @@ public class FrontEndOrderController {
             System.out.println(resp);
             String returnCode = resp.get("return_code");    //获取返回码
             String returnMsg = resp.get("return_msg");
-
             if("SUCCESS".equals(returnCode)){       //若返回码为SUCCESS，则会返回一个result_code,再对该result_code进行判断
                 String resultCode = (String)resp.get("result_code");
                 String errCodeDes = (String)resp.get("err_code_des");
@@ -364,10 +360,8 @@ public class FrontEndOrderController {
                     url.append(errCodeDes);
                 }
             }else {
-
                 url.append(returnMsg);
             }
-
         } catch (Exception e) {
             System.out.println("aaaaaaaaaaaaa");
             System.out.println(e);

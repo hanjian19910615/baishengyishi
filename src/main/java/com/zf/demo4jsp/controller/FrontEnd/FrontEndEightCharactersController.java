@@ -18,7 +18,7 @@ public class FrontEndEightCharactersController {
     private EightCharactersMapper eightCharactersMapper;
 
     /**
-     * app端用户添加订单接口
+     * app端用八字添加
      *
      * @return
      * @Param Order record
@@ -43,7 +43,7 @@ public class FrontEndEightCharactersController {
     }
 
     /**
-     * app端查全部
+     * app端查八字全部
      *
      * @return
      * @Param Order record
@@ -54,13 +54,14 @@ public class FrontEndEightCharactersController {
         List<EightCharacters> eightCharacters = eightCharactersMapper.selectEightcharactersByUserIdAll(userId);
         if(eightCharacters!=null){
             mv.addObject("eightCharacters",eightCharacters);
+            mv.addObject("success","1");
         }else{
             mv.addObject("error","0");
         }
         return mv;
     }
     /**
-     * app端查单条信息
+     * app端删除单条信息
      *
      * @return
      * @Param String userId
@@ -80,7 +81,7 @@ public class FrontEndEightCharactersController {
         return mv;
     }
     /**
-     * app端删除
+     * app端查询单条
      *
      * @return
      * @Param String userId
@@ -91,8 +92,9 @@ public class FrontEndEightCharactersController {
         EightCharacters eightcharacters = eightCharactersMapper.selectByPrimaryKey(id);//查询全部数据
         if (eightcharacters != null) {//判断数据
             mv.addObject("eightcharacters", eightcharacters);
-            }else {
-                mv.addObject("delError", "0");
+            mv.addObject("success","1");
+        }else {
+                mv.addObject("error", "0");
             }
         return mv;
     }
